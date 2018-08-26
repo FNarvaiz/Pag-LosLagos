@@ -1,0 +1,100 @@
+div.formGridView {
+	overflow: hidden;
+}
+div.formGridTools {
+  box-sizing: border-box;
+  margin-bottom: 3px;
+  text-align: left;
+}
+div.formGridTitle {
+  box-sizing: border-box; 
+	width: 70%;
+	text-align: left;
+	border: 1px solid #99aa66;
+	background-color: #99aa66;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+div.formGridTitle table {
+	font-family: Arial;
+	font-size: 12px;
+  font-weight: bold;
+	color: #000000;
+	cursor: default;
+}
+div.formGridTitle td {
+/*
+  padding-left: 3px;
+  padding-right: 3px;
+*/
+}
+div.emptyGrid {
+  text-align: center;
+  width: 100%; 
+  height: 100%; 
+  background-color: #e2e2e2;
+}
+div.formGrid {
+  box-sizing: border-box; 
+	width: 70%;
+	color: #000000;
+	background-color: #ffffff;
+	overflow-y: scroll;
+}
+table.formGrid  {
+	font-family: "Trebuchet MS", Arial;
+	font-size: 12px;
+  line-height: 12px;
+	background-color: #e0e0e0;
+}
+table.formGrid tr {
+	background-color: #FFFFFF;
+	cursor: pointer;
+}
+table.formGrid tr.oddRow {
+	background-color: #f2f2f2;
+}
+table.formGrid tr:hover {
+	background-color: #e0f0ff;
+}
+table.formGrid tr.oddRow:hover {
+	background-color: #e0f0ff;
+}
+table.formGrid tr.off {
+	background-color: #FFFFFF;
+	cursor: default;
+}
+table.formGrid tr.selRow {
+  color: #ffffff;
+  background-color: #006030;
+	cursor: default;
+}
+table.formGrid tr.selRow:hover {
+  background-color: #000070;
+}
+table.formGrid td u { /* currency symbol markup */
+  float: left;
+  margin-left: 4px;
+  text-decoration: none;
+}
+div.formGridFooter {
+box-sizing:border-box;
+	font-family: "Trebuchet MS", Arial;
+	font-size: 12px;
+  line-height: 12px;
+	text-align: left;
+  color:#000000;
+  background-color:#e2ff99;
+  border:1px solid #e2ff99;
+  padding-left: 4px;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+span.formGridFooterBtn {
+  font-size: 10px;
+  color:#e0e0e0;
+  background-color:#404040;
+  padding: 0px 4px;
+  margin-left: 2px;
+  cursor: pointer;
+}

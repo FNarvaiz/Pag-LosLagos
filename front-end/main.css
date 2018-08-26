@@ -1,0 +1,1208 @@
+body {
+	box-sizing: border-box;
+	margin: 0px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #FFFFFF;
+	background-color: #000000;
+  cursor: default;
+}
+a {
+  text-decoration: none;
+	color: #000000;
+}
+.anchor {
+	cursor: hand;
+	cursor: pointer;
+}
+.invisible {
+  visibility: hidden;
+}
+.hidden {
+  display: none;
+}
+div {
+	box-sizing: border-box;
+}
+#debug {
+  position: absolute;
+  left: 30px;
+  top: 25px;
+	width: 200px;
+	height: 100px;
+  padding: 4px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #000000;
+	background-color: #FFFFFF;
+  border: solid 1px red;
+  overflow: auto;
+  z-index: 1000;
+}
+#main {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+	width: 1000px;
+	height: 600px;
+  visibility: hidden;
+}
+#mainPanel {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+	width: 1000px;
+	height: 600px;
+}
+#loadingSignal {
+  position: absolute;
+  left: 965px;
+  top: 579px;
+	width: 18px;
+	height: 18px;
+	z-index: 10;
+	visibility: hidden;
+	background-image: url(resource/ajax-loader.gif);
+	background-repeat: no-repeat;
+	background-color: #373637;
+}
+#header {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 1000px;
+  height: 75px;
+	background-image: url(resource/header.png);
+	background-repeat: no-repeat;
+}
+#mainMenu {
+	box-sizing: border-box;
+  position: absolute;
+  left: 0px;
+  top: 75px;
+	width: 1000px;
+	height: 45px;
+	padding: 0px 10px;
+  color: #ffffff;
+  background-image: url(resource/menuBg.png);
+  background-repeat: repeat-x;
+}
+#mainMenu table {
+  font-size: 13px;
+  color: #ffffff;
+}
+td.btn {
+  text-align: center;
+	padding: 0px 6px;
+  height: 45px;
+}
+td.interBtn {
+  width: 2px;
+  height: 45px;
+}
+#footer {
+  position: absolute;
+  left: 0px;
+  top: 575px;
+  width: 1000px;
+  height: 25px;
+	background-image: url(resource/footer.png);
+	background-repeat: no-repeat;
+}
+#copyright {
+  position: absolute;
+  left: 18px;
+  top: 7px;
+  color: #999999;
+  font-size: 9px;
+}
+#gbdLogo {
+  position: absolute;
+  left: 961px;
+  top: 0px;
+	width: 39px;
+	height: 24px;
+	cursor: hand;
+	cursor: pointer;
+}
+#userMenu {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+	width: 1000px;
+	height: 24px;
+	text-align: center;
+	padding-top: 3px;
+}
+#userMenu span {
+  margin: 0px 4px
+}
+#userName {
+  color: #ffffff;
+  font-weight: bold;
+}
+#dataViewer {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 10;
+	visibility: hidden;
+}
+#dataViewerPanelBg {
+  position: absolute;
+  left: 270px;
+  top: 235px;
+	width: 460px;
+	height: 220px;
+	background-color: #d0d0d0;
+	border-radius: 15px;
+	border: solid 3px #006633;
+  -moz-box-shadow: 10px 10px 5px rgba(0,0,0,0.75);
+  -webkit-box-shadow: 10px 10px 5px rgba(0,0,0,0.75);
+  box-shadow: 10px 10px 5px rgba(0,0,0,0.75);
+}
+#dataViewerHideBtn {
+  position: absolute;
+  left: 439px;
+  top: -17px;
+	width: 30px;
+	height: 30px;
+	background-color: #e2e2e2;
+	border-radius: 15px;
+	border: solid 3px #006633;
+	color: #338833;
+	font-size: 16px;
+	font-weight: bold;
+	text-align: center;
+	padding: 2px;
+  -moz-box-shadow: 4px 4px 4px rgba(0,0,0,0.75);
+  -webkit-box-shadow: 4px 4px 4px rgba(0,0,0,0.75);
+  box-shadow: 4px 4px 4px rgba(0,0,0,0.75);
+	cursor: pointer;
+	cursor: hand;
+}
+#dataViewerPanel {
+  position: absolute;
+  left: 290px;
+  top: 255px;
+	width: 420px;
+	height: 180px;
+	overflow-x: hidden;
+	overflow-y: auto;
+	color: #404040;
+	font-size: 18px;
+}
+#imgViewer {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 10;
+	visibility: hidden;
+}
+#imgViewerPanel {
+  position: absolute;
+  left: 100px;
+  top: 140px;
+	width: 800px;
+	height: 410px;
+	background-color: #d0d0d0;
+	border-radius: 15px;
+	border: solid 3px #006633;
+  -moz-box-shadow: 10px 10px 5px rgba(0,0,0,0.75);
+  -webkit-box-shadow: 10px 10px 5px rgba(0,0,0,0.75);
+  box-shadow: 10px 10px 5px rgba(0,0,0,0.75);
+  overflow: hidden;
+}
+#imgViewerHideBtn {
+  position: absolute;
+  left: 882px;
+  top: 126px;
+	width: 30px;
+	height: 30px;
+	background-color: #e2e2e2;
+	border-radius: 15px;
+	border: solid 3px #006633;
+	color: #338833;
+	font-size: 16px;
+	font-weight: bold;
+	text-align: center;
+	padding: 2px;
+  -moz-box-shadow: 4px 4px 4px rgba(0,0,0,0.75);
+  -webkit-box-shadow: 4px 4px 4px rgba(0,0,0,0.75);
+  box-shadow: 4px 4px 4px rgba(0,0,0,0.75);
+	cursor: pointer;
+	cursor: hand;
+}
+#imgViewerImage {
+  position: absolute;
+  visibility: hidden;
+}
+
+/* Login Dialog ======== */
+
+#loginDialog {
+  position: absolute;
+  left: 0px;
+	top: 0px;
+	width: 1000px;
+	height: 410px;
+	padding: 97px 300px 0px 300px;
+  color: #e0d0c0;
+	z-index: 3;
+}
+#loginDialog table {
+	font-size: 11px;
+  color: #e8e8e8;
+  background-color: #404040;
+  padding: 20px 20px 15px 20px;
+  border: 30px solid #999999;
+  border: 30px solid rgba(255, 255, 255, .2);
+  -webkit-background-clip: padding-box; /* for Safari */
+  background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */
+}
+input.loginDialogEditbox {
+	font-size: 11px;
+  color: #000000;
+  border: 0px;
+  width: 230px;
+  height: 24px;
+  padding: 4px 2px;
+}
+input.loginDialogBtn {
+	font-size: 11px;
+  color: #e0e0e0;
+	background-color: transparent;
+  border: 0px;
+  cursor: hand;
+  cursor: pointer;
+  padding: 0px;
+}
+#loginDialogImg {
+  position: absolute;
+  left: 0;
+  top: 316px;
+  width: 100%;
+  height: 139px;
+}
+
+#registrationDialog {
+  position: absolute;
+  left: 0px;
+	top: 20px;
+	width: 1000px;
+	height: 410px;
+	padding: 56px 300px 0px 300px;
+  color: #e0d0c0;
+	z-index: 3;
+}
+#registrationDialog table {
+	font-size: 11px;
+  color: #e8e8e8;
+  background-color: #404040;
+  padding: 20px 20px 15px 20px;
+  border: 30px solid #999999;
+  border: 30px solid rgba(255, 255, 255, .2);
+  -webkit-background-clip: padding-box; /* for Safari */
+  background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */
+}
+input.registrationDialogEditbox {
+	font-size: 11px;
+  color: #000000;
+  border: 0px;
+  width: 180px;
+  padding: 4px 2px;
+}
+input.registrationDialogBtn {
+	font-size: 11px;
+  color: #e0e0e0;
+	background-color: transparent;
+  border: 0px;
+  cursor: hand;
+  cursor: pointer;
+  padding: 0px;
+}
+#passwordRecoveryDialog {
+  position: absolute;
+  left: 0px;
+	top: 20px;
+	width: 1000px;
+	height: 410px;
+	padding: 70px 300px 0px 300px;
+  color: #e0d0c0;
+	z-index: 3;
+}
+#passwordRecoveryDialog table {
+	font-size: 11px;
+  color: #e8e8e8;
+  background-color: #404040;
+  padding: 20px 20px 15px 20px;
+  border: 30px solid #999999;
+  border: 30px solid rgba(255, 255, 255, .2);
+  -webkit-background-clip: padding-box; /* for Safari */
+  background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */
+}
+input.passwordRecoveryDialogEditbox {
+	font-size: 11px;
+  color: #000000;
+  border: 0px;
+  width: 180px;
+  padding: 4px 2px;
+}
+input.passwordRecoveryDialogBtn {
+	font-size: 11px;
+  color: #e0e0e0;
+	background-color: transparent;
+  border: 0px;
+  cursor: hand;
+  cursor: pointer;
+  padding: 0px;
+}
+
+/* Change Password Dialog ======== */
+
+#changePasswordDialog {
+  position: absolute;
+  left: 0px;
+	top: 20px;
+	width: 1000px;
+	height: 410px;
+	padding: 40px 300px 0px 300px;
+  color: #e0d0c0;
+	z-index: 3;
+}
+#changePasswordDialog table {
+	font-size: 11px;
+  color: #e8e8e8;
+  background-color: #404040;
+  padding: 20px 20px 15px 20px;
+  border: 30px solid #999999;
+  border: 30px solid rgba(255, 255, 255, .2);
+  -webkit-background-clip: padding-box; /* for Safari */
+  background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */
+}
+input.changePasswordDialogEditbox {
+	font-size: 11px;
+  color: #000000;
+  border: 0px;
+  width: 180px;
+  padding: 4px 2px;
+}
+input.changePasswordDialogBtn {
+	font-size: 11px;
+  color: #e0e0e0;
+	background-color: transparent;
+  border: 0px;
+  cursor: hand;
+  cursor: pointer;
+  padding: 0px;
+}
+
+#changePasswordResultDialog {
+  position: absolute;
+  left: 300px;
+	top: 115px;
+	width: 350px;
+	padding: 8px;
+	z-index: 3;
+}
+#changePasswordResultDialog table {
+	font-size: 11px;
+  color: #e8e8e8;
+  background-color: #404040;
+  padding: 20px 20px 15px 20px;
+  border: 30px solid #999999;
+  border: 30px solid rgba(255, 255, 255, .2);
+  -webkit-background-clip: padding-box; /* for Safari */
+  background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */
+}
+input.changePasswordResultDialogBtn {
+	font-size: 11px;
+  color: #e0e0e0;
+	background-color: transparent;
+  border: 0px;
+  cursor: hand;
+  cursor: pointer;
+}
+
+/* main interface ========================= */
+
+#javascriptCode {
+  display: none;
+}
+#dynPanel {
+  position: absolute;
+  left: 0px;
+  top: 120px;
+	width: 1000px;
+	height: 455px;
+	color: #666666;
+	background-image: url(resource/mainBg.jpg);
+  background-repeat: no-repeat;
+}
+#dynPanel a, a:hover, a:visited {
+  color: #ffff33;
+}
+#dynPanel a:hover {
+  text-decoration: underline;
+}
+#dynPanelBg {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+	width: 100%;
+	height: 100%;
+  background-image: url(resource/mainBgOverlay.png);
+  background-repeat: repeat-x;
+}
+#dynPanelOverlay {
+  position: absolute;
+  left: 0px;
+  top: 75px;
+	width: 1000px;
+	height: 455px;
+	background-color: #ffffff;
+	z-index: 5;
+  visibility: hidden;
+}
+
+#contentsPanel {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+	width: 100%;
+	height: 100%;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: bold;
+  border-style: none;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+#servicesDisabled {
+  font-size: 16px;
+  color: #cc0000;
+  font-weight: bold;
+  padding: 16px;
+}
+
+/* Home */
+
+#homeTitleBg {
+  position: absolute;
+  left: 0px;
+  top: 200px;
+	width: 1000px;
+	height: 35px;
+  background-color: #404040;
+	filter: alpha(opacity=65);
+  opacity:.65;
+}
+#homeTitle {
+  position: absolute;
+  left: 30px;
+  top: 205px;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: bold;
+}
+#homeBg {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+	width: 380px;
+	height: 420px;
+  background-color: #ffffff;
+	filter: alpha(opacity=70);
+  opacity:.7;
+}
+#homePanel {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+	width: 380px;
+	height: 420px;
+	padding: 10px;
+  overflow: hidden;
+}
+#homeNews {
+  color: #404040;
+  font-size: 14px;
+}
+#homeNews th {
+  font-size: 18px;
+  font-weight: bold;
+}
+#homeNews td:first-child {
+  padding: 5px 0px;
+}
+#homeNews td:first-child {
+  color: #666666;
+}
+#homeNews td:last-child {
+  font-weight: bold;
+}
+#schedule {
+  left: 420px;
+  top: 20px;
+}
+
+/* Bookings */
+
+div.bookingsButtons {
+  background-color: #e2e2e2;
+  border-radius: 5px;
+  height: 18px;
+  color: #333333;
+  font-size: 12px;
+  text-align: center;
+  padding: 2px 0;
+}
+div.bookingStatusTurn {
+  height: 18px;
+  text-align: center;
+  padding: 2px 0;
+}
+#bookingsPanel {
+  position: absolute;
+  left: 20px;
+  top: 25px;
+  width: 490px;
+  height: 260px;
+  color: #ffffff;
+  font-size: 14px;
+  overflow: hidden;
+}
+#bookingsTitle {
+  font-size: 18px;
+  color: #ffffff;
+  font-weight: bold;
+  padding: 4px 10px;
+  height: 26px;
+}
+#bookingsListing {
+  position: absolute;
+  left: 10px;
+  top: 30px;
+  width: 480px;
+  height: 200px;
+  background-color: rgba(0, 0, 0, 0.15);
+  overflow-x: hidden;
+  overflow-y: auto;
+  scrollbar-3dlight-color: #FFFFFF;
+  scrollbar-arrow-color: #4D4D4D;
+  scrollbar-base-color: #FFFFFF;
+  scrollbar-darkshadow-color: #FFFFFF;
+  scrollbar-face-color: #FFFFFF;
+  scrollbar-track-color: #FFFFFF;
+  scrollbar-highlight-color: #FFFFFF;
+  scrollbar-shadow-color: #FFFFFFF;
+}
+#bookingsListing table {
+  font-size: 14px;
+}
+#bookingsListing th {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+#bookingsListing tr.oddRow {
+  background-color: rgba(0, 0, 0, 0.15);
+}
+#bookingsStatus table {
+  font-size: 14px;
+}
+#bookingsStatus th {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+#bookingsStatus td.oddRow {
+  background-color: rgba(0, 0, 0, 0.15);
+}
+.cancelBookingsBtn {
+  
+}
+
+#bookingsFormPanel {
+  position: absolute;
+  left: 30px;
+  top: 260px;
+  width: 480px;
+  height: 180px;
+  color: #ffffff;
+  font-size: 14px;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.15);
+}
+#bookingsFormTitle {
+  font-size: 18px;
+  color: #ffffff;
+  font-weight: bold;
+  padding: 4px 10px;
+  height: 26px;
+}
+#bookingsformControls {
+  padding: 5px 10px;
+}
+#bookingsformControls table {
+	font-size: 16px;
+}
+#bookingsformControls input {
+	box-sizing: border-box;
+	font-size: 15px;
+	width: 94px;
+	height: 22px;
+	background-color: #FFFFFF;
+	padding-left: 3px;
+	padding-right: 3px;
+  border: solid 1px #FFFFFF;
+}
+#bookingsformControls select {
+  font-size: 15px;
+  width: 127px;
+  border: 0;
+}
+#bookingsformNote {
+	font-size: 12px;
+	color: #999999;
+}
+
+#bookingsStatusPanel {
+  position: absolute;
+  left: 520px;
+  top: 25px;
+  width: 460px;
+  height: 415px;
+  color: #ffffff;
+  font-size: 14px;
+  overflow: hidden;
+}
+#bookingsStatusTitle {
+  font-size: 18px;
+  color: #ffffff;
+  font-weight: bold;
+  padding: 4px 10px;
+  height: 26px;
+}
+#bookingsStatusControls {
+  float: right;
+}
+#bookingsStatusControls select {
+  font-size: 15px;
+  width: 170px;
+  border: 0;
+}
+#bookingsStatus {
+  position: absolute;
+  left: 10px;
+  top: 30px;
+  width: 440px;
+  height: 370px;
+  color: #ffffff;
+  background-color: rgba(0, 0, 0, 0.15);
+  overflow-x: hidden;
+  overflow-y: auto;
+  scrollbar-3dlight-color: #FFFFFF;
+  scrollbar-arrow-color: #4D4D4D;
+  scrollbar-base-color: #FFFFFF;
+  scrollbar-darkshadow-color: #FFFFFF;
+  scrollbar-face-color: #FFFFFF;
+  scrollbar-track-color: #FFFFFF;
+  scrollbar-highlight-color: #FFFFFF;
+  scrollbar-shadow-color: #FFFFFFF;
+}
+#bookingsStatus table {
+  font-size: 14px;
+}
+#bookingsStatus tr.oddRow {
+  background-color: rgba(0, 0, 0, 0.15);
+}
+
+.bookingsButtons {
+  height: 22px;
+}
+
+.turnAvailable { background-color: transparent }
+.turnOwnReservation { background-color: rgba(0, 0, 255, 0.5) }
+.turnNotAvailable { background-color: rgba(255, 0, 0, 0.5) }
+.turnNotUsed { background-color: transparent }
+
+.bookingsTypeButton {
+  border-radius: 5px;
+  color: #ffffff;
+  background-color: rgba(0, 255, 0, 0.5);
+  padding: 1px 4px;
+}
+
+/* Downloads */
+
+#downloadsListingHeading {
+  position: absolute;
+  left: 60px;
+  top: 30px;
+  width: 880px;
+  height: 65px;
+  color: #ffffff;
+  font-weight: bold;
+}
+#downloadsListingHeading table {
+  margin-top: 15px;
+  font-size: 14px;
+  font-weight: bold;
+  color: inherit;
+  background-color: transparent;
+  border-bottom: solid 1px #f2f2f2;
+}
+#downloadControls {
+  text-align: left;
+  font-size: 14px;
+  padding: 0 8px;
+  display: none;
+}
+#downloadControls select {
+  color: #333333;
+  border: solid 1px;
+  font-size: 14px;
+  margin-left: 5px;
+  width: 150px;
+  height: 20px;
+}
+#downloadsListing {
+  position: absolute;
+  left: 60px;
+  top: 69px;
+  width: 880px;
+  height: 370px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  scrollbar-3dlight-color: #FFFFFF;
+  scrollbar-arrow-color: #4D4D4D;
+  scrollbar-base-color: #FFFFFF;
+  scrollbar-darkshadow-color: #FFFFFF;
+  scrollbar-face-color: #FFFFFF;
+  scrollbar-track-color: #FFFFFF;
+  scrollbar-highlight-color: #FFFFFF;
+  scrollbar-shadow-color: #FFFFFFF;
+  padding-right: 10px;
+}
+#downloadsListing table {
+  color: #ffffff;
+  font-size: 14px;
+}
+#downloadsListing tr.oddRow {
+  background-color: rgba(0, 0, 0, 0.15);
+}
+div.downloadsListingDescrip {
+  padding-left: 20px;
+  text-indent: -20px;
+  padding-right: 8px;
+}
+img.downloadIcon {
+  cursor: hand;
+  cursor: pointer;
+  margin: 3px;
+  vertical-align: middle;
+}
+
+/* votes */
+
+div.vote {
+  display: inline-block;
+  cursor: hand;
+  cursor: pointer;
+  padding: 3px;
+  border: solid 1px transparent;
+  vertical-align: middle;
+  color: #aaaaaa;
+}
+div.voteMarked {
+  display: inline-block;
+  padding: 3px;
+  border: solid 1px #aaaaaa;
+  border-radius: 7px;
+  vertical-align: middle;
+}
+div.voteResultBg {
+  position: relative;
+  top: 4px;
+  width: 64px;
+  height: 10px;
+}
+div.voteResultFg {
+  position: relative;
+  top: -6px;
+  width: 64px;
+  height: 10px;
+}
+div.voteQty {
+  position: relative;
+  text-align: center;
+  width: 64px;
+  font-size: 12px;
+  color: #aaaaaa;
+}
+
+/* Surveys */
+
+#surveysTitle {
+  position: absolute;
+  left: 30px;
+  top: 20px;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: bold;
+}
+#surveysTitle p {
+  font-size: 13px;
+  margin: 0px;
+}
+#surveysPanel {
+  position: absolute;
+  left: 30px;
+  top: 105px;
+	width: 940px;
+	height: 340px;
+  color: #ffffff;
+  font-size: 12px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+#surveysLeftCol {
+  width: 440px;
+  float:left;
+}
+#surveysRightCol {
+  width: 440px;
+  float:right;
+  margin-right: 20px;
+}
+div.surveyItem  {
+  background-color: #666666;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 6px;
+  margin-bottom: 10px;
+  padding: 5px 0px;
+  width: 100%;
+}
+div.surveyTitle {
+  font-size: 14px;
+  font-weight: bold;
+  margin: 5px 5px 0px 15px;
+  padding-top: 5px;
+  padding-left: 60px;
+  text-indent: -60px;
+}
+span.surveyDate {
+  color: #e2aa00;
+  margin-left: 10px;
+}
+div.surveyDescription {
+  font-size: 13px;
+  margin: 6px 10px 0px 25px;
+}
+div.surveyResult {
+  float: right;
+  margin: 5px 15px 0px 0px;
+}
+div.surveyVote {
+  margin: 12px 0px 3px 25px; 
+  font-size: 12px;
+  overflow: auto;
+}
+div.surveyVote img {
+  width: 20px;
+  height: 20px;
+}
+/* Suppliers */
+
+#suppliersCategories {
+  position: absolute;
+  left: 685px;
+  top: 27px;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: bold;
+}
+#suppliersCategories select {
+  color: #333333;
+  border: solid 1px;
+  font-size: 12px;
+  margin-left: 5px;
+  width: 200px;
+  height: 20px;
+}
+#suppliersTitle {
+  position: absolute;
+  left: 30px;
+  top: 20px;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: bold;
+}
+#suppliersTitle p {
+  font-size: 13px;
+  margin: 0px;
+}
+#suppliersPanel {
+  position: absolute;
+  left: 30px;
+  top: 105px;
+	width: 940px;
+	height: 340px;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: bold;
+  padding-right: 20px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+td.supplierItem {
+  background-color: #666666;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 6px;
+}
+div.supplierCategory {
+  font-size: 13px;
+  font-weight: bold;
+  font-style: italic;
+  margin: 5px 5px 0px 15px;
+  position: relative;
+  width: 340px;
+  color: #6699cc;
+}
+div.supplierTitle {
+  font-size: 14px;
+  margin: 5px 5px 0px 25px;
+  width: 330px;
+}
+div.supplierDescription {
+  font-size: 11px;
+  margin: 3px 5px 0px 25px; 
+  width: 330px;
+  min-height: 30px;
+}
+div.supplierResult {
+  float: right;
+  margin: 5px 15px 0px 0px;
+}
+div.supplierVote {
+  margin: 5px 0px 3px 25px; 
+  font-size: 12px;
+}
+div.supplierVote img {
+  width: 20px;
+  height: 20px;
+}
+
+/* Classifieds */
+
+#classifiedsTitle {
+  position: absolute;
+  left: 30px;
+  top: 20px;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: bold;
+}
+#classifiedsTitle p {
+  font-size: 13px;
+  margin: 0px;
+}
+#classifiedsCategories {
+  position: absolute;
+  left: 685px;
+  top: 27px;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: bold;
+}
+#classifiedsCategories select {
+  color: #333333;
+  border: solid 1px;
+  font-size: 14px;
+  margin-left: 5px;
+  width: 200px;
+  height: 20px;
+}
+#classifiedsPanel {
+  position: absolute;
+  left: 30px;
+  top: 105px;
+	width: 940px;
+	height: 340px;
+  color: #ffffff;
+  font-size: 12px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+#classifiedsEmpty {
+  background-color: #666666;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 6px;
+  margin-bottom: 10px;
+  padding: 5px 7px;
+  width: 100%;
+  text-align: center;
+}
+#classifiedsLeftCol {
+  width: 440px;
+  float:left;
+}
+#classifiedsRightCol {
+  width: 440px;
+  float:right;
+  margin-right: 20px;
+}
+div.classifiedItem  {
+  background-color: #666666;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 6px;
+  margin-bottom: 10px;
+  padding: 5px 7px;
+  width: 100%;
+  min-height: 80px;
+  overflow: auto;
+}
+div.classifiedTitle {
+  font-size: 14px;
+  font-weight: bold;
+  margin: 5px 5px 0px 5px;
+  padding-top: 5px;
+}
+span.classifiedDate {
+  font-size: 11px;
+  background-color: #333333;
+  color: #66CC00;
+  margin-right: 11px;
+  padding: 1px 5px;
+}
+span.classifiedCategory {
+  font-size: 11px;
+  background-color: #333333;
+  color: #ffffff;
+  padding: 1px 5px;
+}
+div.classifiedDescription {
+  font-size: 13px;
+  margin: 6px 10px 0px 5px;
+}
+div.classifiedImage {
+  float: right;
+  margin: 5px 15px;
+}
+div.classifiedImage img {
+  max-width: 100px;
+  max-height: 100px;
+  border: solid 2px #e2e2e2;
+}
+
+/* Help */
+
+/* Help */
+
+#helpBg {
+  position: absolute;
+  left: 30px;
+  top: 20px;
+	width: 940px;
+	height: 410px;
+  background-color: #000000;
+  border-radius: 6px;
+	filter: alpha(opacity=25);
+  opacity:.25;
+}
+#helpPanel {
+  position: absolute;
+  left: 50px;
+  top: 30px;
+	width: 900px;
+	height: 370px;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: bold;
+  padding-right: 10px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+#helpPanel h1 {
+  color: #00eeff;
+  font-size: 14px;
+}
+#helpPanel p {
+  margin: 0 0 13px 20px;
+}
+
+/* contact */
+
+#contactBg {
+  position: absolute;
+  left: 560px;
+  top: 220px;
+	width: 410px;
+	height: 210px;
+  background-color: #000000;
+  border-radius: 6px;
+	filter: alpha(opacity=25);
+  opacity:.25;
+}
+#contactPanel {
+  position: absolute;
+  left: 520px;
+  top: 220px;
+	width: 375px;
+	height: 220px;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: bold;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+#contactPanel table {
+  font: inherit;
+}
+#contactPanel input,select,textarea {
+  font-family: arial,helvetica;
+  font-size: 12px;
+  color: #333333;
+  border: solid 1px #333333;
+  width: 265px;
+}
+
+#aboutContentPanel {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 640px;
+	height: 100%;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: bold;
+  border-style: none;
+  overflow: hidden;
+}
+#aboutContactPanel {
+  position: absolute;
+  left: 640px;
+  top: 20px;
+	width: 345px;
+	height: 370px;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: bold;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+#aboutContactPanel table {
+  font: inherit;
+}
+#aboutContactPanel input,select,textarea {
+  position: relative;
+  left: 0;
+  top: 0;
+  font-family: arial,helvetica;
+  font-size: 12px;
+  color: #333333;
+  border: solid 1px #333333;
+  width: 265px;
+}

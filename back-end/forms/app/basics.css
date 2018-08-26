@@ -1,0 +1,10 @@
+.anchor {
+  cursor: pointer;
+}
+.invisible {
+  visibility: hidden;
+}
+.hidden {
+  display:none;
+}
+

@@ -1,0 +1,189 @@
+body {
+  overflow-y: scroll;
+  background-color: #e2e2e2;
+  font-family: arial;
+}
+table {
+  font-family: arial;
+  font-size: 11px;
+  color: inherit;
+}
+#main {
+	-moz-box-sizing: border-box;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+	width: 1000px;
+	height: 600px;
+  overflow: hidden;
+}
+#header {
+	-moz-box-sizing: border-box;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+	width: 980px;
+	height: 50px;
+  overflow: hidden;
+  background-color: #ffffff;
+  background-image: url(resource/logo.png);
+  background-repeat: no-repeat;
+  background-position: right;
+}
+#topTitle {
+	-moz-box-sizing: border-box;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+	width: 400px;
+	height: 50px;
+	padding-top: 7px;
+  padding-left: 10px;
+	text-align: left;
+	font-size: 12px;
+  font-weight: bold;
+	color: #404040;
+	z-index: 2;
+/*  background-color: #f29209; */
+}
+#usrName {
+	-moz-box-sizing: border-box;
+  position: absolute;
+  left: 10px;
+  top: 26px;
+	width: 500px;
+	height: 20px;
+	font-size: 11px;
+  text-align: left;
+  overflow: hidden;
+  visibility: hidden;
+}
+#usrName table {
+  font-size: 11px;
+  font-weight: bold;
+}
+#menuBtn {
+	-moz-box-sizing: border-box;
+  position: absolute;
+  left: 0px;
+  top: 50px;
+	width: 80px;
+	height: 20px;
+	font-size: 12px;
+  font-weight: bold;
+	text-align: center;
+  cursor: pointer;
+  color: #404040;
+  background-color: #c8c8c8;
+  border: solid 1px #000000;
+  padding-top: 3px;
+}
+#menu {
+	-moz-box-sizing: border-box;
+  position: absolute;
+  left: 10px;
+  top: 80px;
+	width: 200px;
+/*	height: 510px; */
+	color: #404040;
+	font-size: 11px;
+	font-weight: bold;
+  background-color: #c8c8c8;
+  border: solid 1px #000000;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding: 12px;
+}
+#menuBackgnd {
+	-moz-box-sizing: border-box;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+	width: 1000px;
+	height: 600px;
+	z-index: 3;
+}
+div.menuItem {
+	-moz-box-sizing: border-box;
+  position: relative;
+	width: 100%;
+  padding: 2px 2px 2px 8px;
+	text-align: left;
+  overflow: hidden;
+}
+div.menuItemNormal {
+	color: #404040;
+	background-color: transparent;
+  cursor: pointer;
+}
+div.menuItemPointed {
+	color: #ffffff;
+	background-color: #000070;
+  cursor: pointer;
+}
+div.menuItemSelected {
+	color: #404040;
+	background-color: #f0f0f0;
+  cursor: default;
+}
+div.menuSeparator {
+	-moz-box-sizing: border-box;
+	background-color: #999999;
+  height: 1px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  overflow: hidden;
+}
+#mainPanel {
+	-moz-box-sizing: border-box;
+  position: absolute;
+  left: 10px;
+  top: 60px;
+	width: 980px;
+	height: 530px;
+  overflow: hidden;
+  visibility: hidden;
+}
+#initialMessage {
+  font-size: 16px;
+  font-weight: bold;
+  color: #404040;
+}
+#welcomeMessage {
+  font-size: 16px;
+  font-weight: bold;
+  color: #404040;
+}
+#loadingSignal {
+	-moz-box-sizing: border-box;
+  position: absolute;
+  left: 745px;
+  top: 8px;
+	width: 32px;
+	height: 32px;
+	z-index: 10;
+	visibility: hidden;
+	background-image: url(resource/loading.gif);
+	background-repeat: no-repeat;
+}
+#dialogbackgnd {
+	-moz-box-sizing: border-box;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+	width: 1000px;
+	height: 600px;
+	z-index: 5;
+	visibility: hidden;
+}
+#dialogsPanel {
+	-moz-box-sizing: border-box;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+	width: 1000px;
+	height: 600px;
+	z-index: 10;
+	visibility: hidden;
+}
+

@@ -1,0 +1,122 @@
+#datePicker {
+  position: absolute;
+  left: 100px;
+  top: 100px;
+  border-radius: 3px 3px 3px 3px;
+  -moz-border-radius: 3px 3px 3px 3px;
+  -ms-border-radius: 3px 3px 3px 3px;
+  -webkit-border-radius: 3px 3px 3px 3px;
+  -khtml-border-radius: 3px 3px 3px 3px;
+  background-color: #f2f2f2;
+	font-family: "Trebuchet MS", Arial;
+	font-size: 11px;
+  width: 200px;
+  color: #666666;
+  padding: 4px;
+  border: solid 1px #666666;
+  cursor: default;
+  visibility: hidden;
+  z-index: 100;
+	-moz-box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
+	-webkit-box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
+	box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
+	/* For IE 8 */
+	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=5, Direction=135, Color='#888888')";
+	/* For IE 5.5 - 7 */
+	filter: progid:DXImageTransform.Microsoft.Shadow(Strength=5, Direction=135, Color='#888888');
+}
+#datePicker select {
+  color: inherit;
+  font: inherit;
+  height: 19px;
+  border: solid 1px #999999;
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -khtml-border-radius: 3px;
+}
+#datePickerMonthComboBox {
+  width: 50px;
+}
+#datePickerYearComboBox {
+  width: 50px;
+  margin-left: 4px;
+}
+#datePickerCloseBtn {
+  float: right;
+  font-size: 11px;
+  font-weight: bold;
+  background-color: #990000;
+  color: #e2e2e2;
+  width: 15px;
+  text-align: center;
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -khtml-border-radius: 3px;
+  cursor: hand;
+  cursor: pointer;
+}
+#datePickerCloseBtn:hover {
+  color: #ffffff;
+}
+#dayPicker {
+  color: inherit;
+  font: inherit;
+  margin-top: 4px;
+}
+#dayPicker th {
+  font-weight: bold;
+  text-align: center;
+  width: 14.28%;
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -khtml-border-radius: 3px;
+}
+#dayPicker td {
+  text-align: center;
+  background-color: #e2e2e2;
+  width: 14.28%;
+  padding: 1px 0px;
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -khtml-border-radius: 3px;
+}
+#dayPicker td.selected {
+  border: solid 1px #cc0000;
+  font-weight: bold;
+}
+#dayPicker td.clickeable:hover {
+  color: #000000;
+  font-weight: bold;
+}
+#dayPicker td:first-child {
+  color: #990000;
+  background-color: #d0d0d0 !important;
+}
+.datePickerBtn {
+  color: inherit;
+  font: inherit;
+  height: 19px;
+  border: solid 1px #999999;
+  background-color: #e2e2e2;
+  margin-left: 4px;
+  padding: 0 3px;
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -khtml-border-radius: 3px;
+  cursor: hand;
+  cursor: pointer;
+}
+.datePickerBtn:hover {
+  color: #000000;
+}
+

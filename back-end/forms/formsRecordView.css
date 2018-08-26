@@ -1,0 +1,349 @@
+div.formRecordView {
+	overflow: hidden;
+}
+div.formRecordViewButtons {
+	-moz-box-sizing: border-box;
+	padding: 1px;
+  height: 24px;
+	border-top: solid 1px gray;
+	border-bottom: solid 1px gray;
+  overflow: hidden;
+}
+div.formRecordViewButtons div.button {
+	-moz-box-sizing: border-box;
+  position: absolute;
+	top: 2px;
+	width: 18px;
+	height: 18px;
+	background-color: #FFFFFF;
+	border: solid 1px gray;
+  cursor: pointer;
+}
+div.formRecordViewButtons img {
+  position: absolute;
+	left: 1px;
+	top: 1px;
+  cursor: pointer;
+}
+div.formRecordViewControls {
+	-moz-box-sizing: border-box;
+  position: absolute;
+	left: 0px;
+	top: 24px;
+}
+div.recordViewAuditInfo {
+	-moz-box-sizing: border-box;
+  position: absolute;
+  left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+  text-align: right;
+  font-size: 9px;
+  font-weight: normal;
+  color: #666666;
+  padding-right: 4px;
+}
+div.recordViewAccessLevel {
+	-moz-box-sizing: border-box;
+  position: absolute;
+  left: 0px;
+	top: 2px;
+  height: 18px;
+  padding: 1px 5px;
+  font-size: 11px;
+  font-weight: bold;
+  color: #cc0000;
+	border: solid 1px gray;
+  background-color: #ececec;
+  cursor: default;
+}
+
+/* Controls' styes ================ */
+
+input {
+	font-family: "Trebuchet MS";
+	font-size: 11px;
+	font-style: normal;
+}
+select {
+	font-family: "Trebuchet MS";
+	font-size: 11px;
+	font-style: normal;
+	padding: 0px;
+	margin: 0px;
+	background-color: #FFFFFF;
+	border: solid 1px gray;
+}
+textarea {
+	font-family: "Trebuchet MS";
+	font-size: 11px;
+	font-style: normal;
+	padding: 0px;
+	margin: 0px;
+	background-color: #FFFFFF;
+	border: solid 1px gray;
+	-moz-box-sizing: border-box;
+  position: absolute;
+	left: 4px;
+	top: 4px;
+  padding-left: 2px;
+  overflow: auto;
+}
+div.fieldLabel {
+	font-family: Arial;
+	font-size: 11px;
+	font-style: normal;
+	font-weight: normal;
+  color: #000000;
+	-moz-box-sizing: border-box;
+  position: absolute;
+	left: 8px;
+	top: 4px;
+	padding-top: 3px;
+  text-align: right;
+}
+div.labelRequired {
+  color: #b00000;
+}
+div.labelReadOnly {
+  color: #404040;
+}
+div.labelDisabled {
+  color: #707070;
+}
+div.fieldNote {
+	font-family: Arial;
+	font-size: 11px;
+	font-style: normal;
+	font-weight: normal;
+  color: #C00000;
+	-moz-box-sizing: border-box;
+  position: absolute;
+	left: 8px;
+	top: 4px;
+	padding-top: 4px;
+  text-align: center;
+  overflow: hidden;
+}
+div.fieldSeparator {
+	font-family: Arial;
+	font-size: 11px;
+	font-style: normal;
+	font-weight: bold;
+	color: #004090;
+	-moz-box-sizing: border-box;
+  position: absolute;
+	left: 4px;
+	top: 4px;
+  width: 100%;
+	padding-top: 2px;
+  border-bottom: solid 1px gray;
+}
+input.editbox {
+	-moz-box-sizing: border-box;
+  position: absolute;
+	left: 100px;
+	top: 4px;
+	width: 190px;
+	height: 19px;
+	background-color: #FFFFFF;
+	padding-left: 3px;
+	padding-right: 3px;
+  border: solid 1px gray;
+	line-height: 14px;
+}
+input.numericEditbox {
+	-moz-box-sizing: border-box;
+  position: absolute;
+	left: 100px;
+	top: 4px;
+	width: 50px;
+	height: 19px;
+	background-color: #FFFFFF;
+	padding-left: 3px;
+	padding-right: 3px;
+  border: solid 1px gray;
+	line-height: 14px;
+}
+input.decimalEditbox {
+	-moz-box-sizing: border-box;
+  position: absolute;
+	left: 100px;
+	top: 4px;
+	width: 50px;
+	height: 19px;
+	background-color: #FFFFFF;
+	padding-left: 3px;
+	padding-right: 3px;
+  border: solid 1px gray;
+	line-height: 14px;
+  text-align: right;
+  cursor: default;
+}
+input.moneyEditbox {
+	-moz-box-sizing: border-box;
+  position: absolute;
+	left: 100px;
+	top: 4px;
+	width: 50px;
+	height: 19px;
+	background-color: #FFFFFF;
+	padding-left: 3px;
+	padding-right: 3px;
+  border: solid 1px gray;
+	line-height: 14px;
+  text-align: right;
+  cursor: default;
+}
+input.fileUploadEditBox {
+	-moz-box-sizing: border-box;
+  position: absolute;
+	left: 100px;
+	top: 4px;
+	width: 190px;
+	height: 19px;
+	background-color: #FFFFFF;
+	padding-left: 3px;
+	padding-right: 3px;
+  border: solid 1px gray;
+	line-height: 14px;
+  background-color: transparent;
+}
+div.checkbox {
+	-moz-box-sizing: border-box;
+  position: absolute;
+	left: 100px;
+	top: 4px;
+	height: 19px;
+	width: 19px;
+	border: solid 1px gray;
+	overflow: hidden;
+}
+div.checkbox input {
+  position: absolute;
+	left: 2px;
+	top: 2px;
+	height: 13px;
+	width: 13px;
+	margin: 0px;
+}
+div.radiobutton {
+	-moz-box-sizing: border-box;
+  position: absolute;
+	left: 100px;
+	top: 4px;
+	height: 19px;
+	width: 19px;
+	border: solid 1px gray;
+	overflow: hidden;
+}
+div.radiobutton input {
+  position: absolute;
+	left: 1px;
+	top: 2px;
+	height: 13px;
+	width: 13px;
+	margin: 0px;
+}
+input:focus, select:focus, textarea:focus {
+/*  background-color: #fffff0; */
+}
+.button {
+	-moz-box-sizing: border-box;
+  font-family: Arial;
+  position: absolute;
+	left: 100px;
+	top: 4px;
+	height: 19px;
+	padding: 0px;
+	border: solid 1px #505050;
+  color: #000000;
+  background-color: #c0c0c0;
+  cursor: pointer;
+}
+.buttonDisabled {
+	-moz-box-sizing: border-box;
+  font-family: Arial;
+  position: absolute;
+	left: 100px;
+	top: 4px;
+	height: 19px;
+	padding: 0px;
+	border: solid 1px #505050;
+  color: #808080;
+  background-color: #c0c0c0;
+  cursor: default;
+}
+.navButton {
+	-moz-box-sizing: border-box;
+  font-family: Arial;
+  position: absolute;
+	left: 100px;
+	top: 4px;
+	height: 19px;
+	padding: 0px;
+	border: solid 1px #000000;
+  color: #000000;
+  background-color: #c0c0c0;
+  cursor: pointer;
+}
+.navButtonDisabled {
+	-moz-box-sizing: border-box;
+  font-family: Arial;
+  position: absolute;
+	left: 100px;
+	top: 4px;
+	height: 19px;
+	padding: 0px;
+	border: solid 1px #000000;
+  color: #808080;
+  background-color: #c0c0c0;
+  cursor: default;
+}
+input.specializedEditor {
+	-moz-box-sizing: border-box;
+  position: absolute;
+	left: 100px;
+	top: 4px;
+	height: 19px;
+	border: solid 1px gray;
+}
+div.selectContainer {
+	-moz-box-sizing: border-box;
+  position: absolute;
+	width: 100px;
+	height: 19px;
+	padding: 0px;
+	margin: 0px;
+	border: solid 1px gray;
+  overflow: hidden;
+}
+select.combobox {
+  position: absolute;
+  left: -2px;
+  top: -2px;
+	width: 104px;
+	height: 20px;
+	padding: 0px;
+	margin: 0px;
+	background-color: #FFFFFF;
+	border-width: 2px;
+	border-bottom-width: 0;
+}
+select.listbox {
+	-moz-box-sizing: border-box;
+  position: absolute;
+	width: 100px;
+	padding: 0px;
+	margin: 0px;
+	background-color: #FFFFFF;
+	border: solid 1px gray;
+}
+select.listbox option {
+  height: 18px;
+}
+select:focus, textarea:focus {
+/*  background-color: #fffff0; */
+}
+

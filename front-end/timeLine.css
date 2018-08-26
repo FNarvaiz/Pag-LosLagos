@@ -1,0 +1,251 @@
+#timeLineContainer {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+	width: 100%;
+	height: 100%;
+}
+#timeLine {
+  position: absolute;
+  left: 200px;
+  top: 20px;
+	width: 700px;
+	height: 300px;
+}
+#timeLineScaleBg {
+  position: absolute;
+  left: 2px;
+  top: 0px;
+	width: 696px;
+	height: 40px;
+	background-image: url(resource/timeLineScaleBg.png);
+	background-repeat: repeat-y;
+	filter: alpha(opacity=80);
+  opacity:.8;
+}
+#timeLineGridContainer {
+  position: relative;
+  width: 700px;
+  height: 100%;
+  overflow: hidden;
+}
+#timeLineGrid {
+	font-size: 11px;
+  color: #000000;
+}
+#timeLineRowLabels {
+  position: absolute;
+  left: 30px;
+  top: 64px;
+	width: 150px;
+	height: 255px;
+  overflow: hidden;
+}
+#timeLineRowLabels table {
+	font-size: 14px;
+  color: #b9ffff;
+  font-weight: bold;
+  text-align: right;
+}
+#timeLineArrows {
+  position: absolute;
+  left: 136px;
+	top: 30px;
+	height: 20px;
+}
+#timeLineEndLeftArrow {
+	-moz-box-sizing: border-box;
+  position: absolute;
+  left: 0px;
+	top: 0px;
+	width: 20px;
+	height: 20px;
+	background-image: url(resource/arrow_left_end.png);
+	background-repeat: no-repeat;
+	cursor: hand;
+	cursor: pointer;
+}
+#timeLineEndRightArrow {
+	-moz-box-sizing: border-box;
+  position: absolute;
+  left: 808px;
+	top: 0px;
+	width: 20px;
+	height: 20px;
+	background-image: url(resource/arrow_right_end.png);
+	background-repeat: no-repeat;
+	cursor: hand;
+	cursor: pointer;
+}
+#timeLineFastLeftArrow {
+	-moz-box-sizing: border-box;
+  position: absolute;
+  left: 20px;
+	top: 0px;
+	width: 20px;
+	height: 20px;
+	background-image: url(resource/arrow_left_fast.png);
+	background-repeat: no-repeat;
+	cursor: hand;
+	cursor: pointer;
+}
+#timeLineFastRightArrow {
+	-moz-box-sizing: border-box;
+  position: absolute;
+  left: 788px;
+	top: 0px;
+	width: 20px;
+	height: 20px;
+	background-image: url(resource/arrow_right_fast.png);
+	background-repeat: no-repeat;
+	cursor: hand;
+	cursor: pointer;
+}
+#timeLineLeftArrow {
+	-moz-box-sizing: border-box;
+  position: absolute;
+  left: 40px;
+	top: 0px;
+	width: 20px;
+	height: 20px;
+	background-image: url(resource/arrow_left.png);
+	background-repeat: no-repeat;
+	cursor: hand;
+	cursor: pointer;
+}
+#timeLineRightArrow {
+	-moz-box-sizing: border-box;
+  position: absolute;
+  left: 768px;
+	top: 0px;
+	width: 20px;
+	height: 20px;
+	background-image: url(resource/arrow_right.png);
+	background-repeat: no-repeat;
+	cursor: hand;
+	cursor: pointer;
+}
+td.timeLineColumn {
+	width: 70px;
+	height: 100%;
+}
+div.timeLineIcons {
+	width: 66px;
+	height: 255px;
+	margin: 0px 2px;
+	background-color: #fcffff;
+  background-image: url(resource/timeLineColumnBg.png);
+  background-repeat: repeat-x;
+}
+div.timeLineIcons img {
+  padding: 1px 2px;
+}
+div.timeLineIconsSelected {
+	width: 66px;
+	height: 255px;
+	margin: 0px 2px;
+	background-color: #c8c8cd;
+  background-image: url(resource/timeLineColumnSelectedBg.png);
+  background-repeat: repeat-x;
+}
+div.timeLineIconsSelected img {
+  border: solid 1px transparent;
+  border-radius: 4px;
+  padding: 2px 0px 0px 3px;
+}
+div.timeLineColumnLabel {
+	width: 100%;
+  height: 40px;
+  margin-bottom: 4px;
+  padding-top: 4px;
+  text-align: center;
+  color: #ffffff;
+  font-size: 14px;
+}
+
+/* timeLineDetail ========================================= */
+
+#timeLineDetail {
+  position: absolute;
+  left: 23px;
+  top: 325px;
+	width: 954px;
+	height: 110px;
+	font-size: 11px;
+  color: #FFFFFF;
+  overflow: hidden;
+}
+#timeLineDetailIconsBg {
+  position: absolute;
+  left: 27px;
+  top: 0px;
+  width: 900px;
+  height: 100%;
+	background-color: #a0d0C0;
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+}
+#timeLineDetailIcons {
+  position: absolute;
+  left: 27px;
+  top: 0px;
+  width: 900px;
+  height: 100%;
+  overflow: hidden;
+}
+#timeLineDetailIcons table {
+  height: 100%;
+}
+#timeLineDetailIcons td {
+  padding: 0px 10px;
+}
+#timeLineDetailIcons img {
+  margin: 8px 5px 2px 5px;
+	cursor: hand;
+	cursor: pointer;
+}
+div.timeLineDetailIconName {
+  color: #ffffff;
+	font-size: 12px;
+  text-align: center;
+  width: 130px;
+  height: 45px;
+  overflow: hidden;
+}
+td.timeLineDetailIconDarkBg {
+	background-color: #000;
+	background-color: rgba(0, 0, 0, 0.25);
+}
+#timeLineDetailIcons span {
+	cursor: hand;
+	cursor: pointer;
+}
+#timeLineDetailLeftArrow {
+	-moz-box-sizing: border-box;
+  position: absolute;
+  left: 0px;
+	top: 0px;
+	width: 27px;
+	height: 100%;
+	background-color: #a0d0C0;
+	background-image: url(resource/arrow_left_detail.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	cursor: hand;
+	cursor: pointer;
+}
+#timeLineDetailRightArrow {
+	-moz-box-sizing: border-box;
+  position: absolute;
+  left: 927px;
+	top: 0px;
+	width: 27px;
+	height: 100%;
+	background-color: #a0d0C0;
+	background-image: url(resource/arrow_right_detail.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	cursor: hand;
+	cursor: pointer;
+}
+

@@ -1,0 +1,53 @@
+div.queryOptions {
+  overflow: hidden;
+}
+div.queryOptions table {
+	font-family: Arial;
+	font-size: 11px;
+	font-style: normal;
+	font-weight: bold;
+  color: #000000;
+  display: inline;
+  margin-right: 10px;
+}
+td.queryOptionsLabel {
+	-moz-box-sizing: border-box;
+	padding-right: 8px;
+  text-align: right;
+}
+div.queryOptionsSelectContainer {
+	-moz-box-sizing: border-box;
+  position: relative;
+	width: 130px;
+	height: 19px;
+	padding: 0px;
+	margin: 0px;
+	border: solid 1px gray;
+  overflow: hidden;
+}
+select.queryOptionsCombobox {
+	width: 133px;
+}
+input.querySearchValue {
+	background-color: #FFFFFF;
+	padding-left: 3px;
+	padding-right: 3px;
+  border: solid 1px gray;
+	line-height: 14px;
+  width: 150px;
+	height: 19px;
+}
+input.queryOptionsButton {
+	-moz-box-sizing: border-box;
+  position: relative;
+  top: 1px;
+	font-size: 10px;
+  width: 43px;
+	height: 19px;
+	padding: 0px;
+	border: solid 1px #505050;
+  color: #000000;
+  background-color: #c0c0c0;
+  cursor: pointer;
+}
+

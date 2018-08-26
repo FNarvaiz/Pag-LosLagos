@@ -1,0 +1,107 @@
+
+table.dialog input {
+	font-size: 11px;
+  border: solid 1px #666666;
+  color: #000000;
+}
+td.dialogTitle {
+	box-sizing: border-box;
+	height: 20px;
+	padding: 3px;
+	overflow: hidden;
+	color: white;
+  font-size: 12px;
+	font-weight: bold;
+	background-color: navy;
+}
+td.dialogBody {
+	box-sizing: border-box;
+	color: #000000;
+	padding: 3px;
+  font-size: 11px;
+}
+td.dialogButtons table {
+  font-size: 11px;
+	height: 20px;
+	overflow: hidden;
+}
+td.dialogButtons input {
+	width: 80px;
+}
+
+/* Login Dialog ======== */
+
+#adminLoginDialog {
+	box-sizing: border-box;
+  position: absolute;
+  left: 325px;
+	top: 200px;
+	width: 350px;
+	height: 185px;
+	padding: 8px;
+  color: #000000;
+	background-color: #c8c8c8;
+  border: solid 1px #000000;
+	z-index: 3;
+}
+#adminLoginDialog table {
+	font-size: 11px;
+  color: #000000;
+  margin: 0;
+}
+input.adminLoginDialogEditbox {
+	font-size: 11px;
+  color: #000000;
+  border: 0px;
+  width: 230px;
+}
+input.adminLoginDialogBtn {
+	font-size: 11px;
+  color: #ffffff;
+	background-color: #404040;
+  border: 0px;
+  cursor: pointer;
+}
+  
+
+/* File Upload Dialog ======== */
+
+#fileUploadDialog {
+	box-sizing: border-box;
+  position: absolute;
+	left: 300px;
+	top: 275px;
+	height: 88px;
+	width: 520px;
+	z-index: 3;
+	border: solid 2px gray;
+	background-color: silver;
+	overflow: hidden;
+}
+#fileUploadDialog iframe {
+	box-sizing: border-box;
+  position: absolute;
+	left: 4px;
+	top: 84px;
+	width: 400px;
+	height: 138px;
+	background-color: white;
+  border: solid 1px gray;
+  display: none;
+	overflow: auto;
+}
+
+/* HTML Editor Dialog ======== */
+
+#htmlEditorDialog {
+	box-sizing: border-box;
+  position: absolute;
+	left: 150px;
+	top: 0px;
+	height: 490px;
+	width: 730px;
+	z-index: 3;
+	border: solid 2px gray;
+	background-color: silver;
+	overflow: hidden;
+}

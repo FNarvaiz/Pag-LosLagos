@@ -1,0 +1,74 @@
+body {
+  font-family: Arial;
+  overflow-y: scroll;
+}
+.anchor {
+  cursor: pointer;
+}
+.hidden {
+  display: none;
+}
+#reportLogo {
+  font-family: "Times New Roman", Roman, Serif;
+  font-size: 40px;
+  text-align: center;
+  padding: 20px;
+}
+#reportTitle {
+  font-size: 15px;
+  font-weight: bold;
+  text-align: center;
+}
+#reportTimeStamp {
+  font-size: 10px;
+  font-weight: normal;
+  text-align: center;
+  margin-bottom: 20px;
+}
+table.reportParams {
+  font-family: Arial;
+  font-size: 12px;
+  font-weight: bold;
+  margin: 4px;
+}
+table.reportLevel1 {
+  font-family: "Trebuchet MS", Arial;
+  font-size: 12px;
+  margin: 4px;
+  width: 90%;
+}
+table.reportLevel1 th {
+  font-family: Arial;
+  font-weight: bold;
+  border-bottom: solid 1px black;
+}
+table.reportLevel1 td {
+  padding-left: 2px;
+  padding-right: 2px;
+}
+table.reportLevel1 td.footer {
+  border-top: solid 1px black;
+}
+
+table.reportLevel2 {
+  font-family: "Trebuchet MS", Arial;
+  font-size: 12px;
+  margin: 0px;
+}
+table.reportLevel2 th {
+  font-family: Arial;
+  font-size: 12px;
+  font-weight: bold;
+  border-bottom: solid 1px black;
+}
+table.reportLevel2 td {
+  padding-left: 2px;
+  padding-right: 2px;
+}
+table.reportLevel2 td.footer {
+  border-top: solid 1px black;
+}
+.prodCode {
+  cursor: pointer;
+  text-decoration: underline;
+}

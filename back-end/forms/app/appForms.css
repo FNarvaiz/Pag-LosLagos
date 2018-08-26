@@ -1,0 +1,137 @@
+/* Common row grid classes -------------------------- */
+
+.hot { color: #CC0000 }
+.warm { color: #009900 }
+.freezed { color: #666666 }
+
+/* Users -------------------------- */
+
+#formUsers { left: 0px;	top: 28px; width: 600px; height: 500px; overflow: hidden }
+#formUsersGridView { top: 0px; width: 320px; height: 100% }
+#formUsersRecordView { left: 330px; top: 0px; width: 270px; height: 100% }
+#formUsersRecordViewControls { height: 470px }
+
+#formUsersReports { left: 0px; top: 360px; width: 320px; height: 170px; overflow: hidden }
+#formUsersReportsGridView { top: 0px; height: 110px }
+#formUsersReportsRecordView { top: 110px; height: 60px }
+
+#formUsersActivity { left: 610px; top: 28px; width: 370px; height: 500px; overflow: hidden }
+#formUsersActivityGridView { }
+#formUsersActivityRecordView { display: none }
+
+/* Neighbors -------------------------- */
+
+#formNeighbors { left: 0px;	top: 28px; width: 600px; height: 500px; overflow: hidden }
+#formNeighborsQuerySearchValue { width: 180px }
+#formNeighborsQueryType { width: 225px }
+#formNeighborsQueryTypeCombobox { width: 228px }
+#formNeighborsGridView { top: 0px; width: 300px; height: 100% }
+#formNeighborsRecordView { left: 310px; top: 0px; width: 290px; height: 100% }
+
+#formNeighborsActivity { left: 610px; top: 28px; width: 370px; height: 500px; overflow: hidden }
+#formNeighborsActivityGridView { }
+#formNeighborsActivityRecordView { display: none }
+
+/* Suppliers -------------------------- */
+
+#formSuppliers { left: 0px;	top: 28px; width: 690px; height: 500px; overflow: hidden }
+#formSuppliersQuerySearchValue { width: 270px }
+#formSuppliersQueryType { width: 200px }
+#formSuppliersQueryTypeCombobox { width: 203px }
+#formSuppliersGridView { top: 0px; width: 400px; height: 100% }
+#formSuppliersRecordView { left: 410px; top: 0px; width: 280px; height: 100% }
+
+#formSuppliersReviews { left: 700px; top: 28px; width: 280px; height: 500px; overflow: hidden }
+#formSuppliersReviewsGridView { top: 20px; height: 480px }
+#formSuppliersReviewsRecordView { display: none }
+
+/* Surveys -------------------------- */
+
+#formSurveys { left: 0px;	top: 28px; width: 690px; height: 500px; overflow: hidden }
+#formSurveysQuerySearchValue { width: 270px }
+#formSurveysQueryType { width: 200px }
+#formSurveysQueryTypeCombobox { width: 203px }
+#formSurveysGridView { top: 0px; width: 400px; height: 100% }
+#formSurveysRecordView { left: 410px; top: 0px; width: 280px; height: 100% }
+
+#formSurveysReviews { left: 700px; top: 28px; width: 280px; height: 500px; overflow: hidden }
+#formSurveysReviewsGridView { top: 20px; height: 480px }
+#formSurveysReviewsRecordView { display: none }
+
+/* Timeline ---------------------------- */
+
+#formTimeline { left: 0px;	top: 28px; width: 980px; height: 500px; overflow: hidden }
+#formTimeLineQuerySearchValue { width: 260px }
+#formTimeLineQueryType { width: 200px }
+#formTimeLineQueryTypeCombobox { width: 203px }
+#formTimelineGridView { top: 0px; width: 640px; height: 100% }
+#formTimelineRecordView { left: 640px; top: 0px; width: 340px; height: 100% }
+
+/* Classifieds ---------------------------- */
+
+#formClassifieds { left: 0px;	top: 28px; width: 980px; height: 500px; overflow: hidden }
+#formClassifiedsQuerySearchValue { width: 260px }
+#formClassifiedsQueryType { width: 200px }
+#formClassifiedsQueryTypeCombobox { width: 203px }
+#formClassifiedsGridView { top: 0px; width: 640px; height: 100% }
+#formClassifiedsRecordView { left: 640px; top: 0px; width: 340px; height: 100% }
+
+/* Resource Bookings ---------------------- */
+
+#formResourceBookings { left: 0px;	top: 28px; width: 980px; height: 500px; overflow: hidden }
+#formResourceBookingsQuerySearchValue { width: 260px }
+#formResourceBookingsQueryType { width: 200px }
+#formResourceBookingsQueryTypeCombobox { width: 203px }
+#formResourceBookingsGridView { top: 0px; width: 640px; height: 100% }
+#formResourceBookingsRecordView { left: 640px; top: 0px; width: 340px; height: 100% }
+
+/* Reports ----------------------------- */
+
+#formReports {left: 0px; top: 28px; width: 100%; height: 442px; overflow: hidden }
+#formReportsGridView { left: 30px; top: 8px; width: 390px; height: 434px }
+#formReportsRecordView { left: 420px; top: 8px; width: 288px; height: 434px }
+#formReportsRecordViewControls { top: 0px }
+
+/* Contents ----------------------------- */
+
+#formContents {left: 0px; top: 28px; width: 100%; height: 442px; overflow: hidden }
+#formContentsGridView { left: 30px; top: 8px; width: 390px; height: 434px }
+#formContentsRecordView { left: 420px; top: 8px; width: 288px; height: 434px }
+
+/* Params ------------------------ */
+
+#formCommissions { left: 0px; top: 28px; width: 245px;	height: 305px; overflow: hidden; border-right: solid 1px #404040; border-bottom: solid 1px #404040 }
+#formCommissionsGridView { top: 20px; height: 129px }
+#formCommissionsRecordView { top: 149px;	height: 160px }
+
+#formTimelineCategories { left: 245px; top: 28px; width: 245px;	height: 289px; overflow: hidden; border-right: solid 1px #404040; border-bottom: solid 1px #404040 }
+#formTimelineCategoriesGridView { top: 20px; height: 129px }
+#formTimelineCategoriesRecordView { top: 149px;	height: 140px }
+
+#formSuppliersCategories { left: 490px; top: 28px; width: 245px;	height: 289px; overflow: hidden; border-right: solid 1px #404040; border-bottom: solid 1px #404040 }
+#formSuppliersCategoriesGridView { top: 20px; height: 129px }
+#formSuppliersCategoriesRecordView { top: 149px;	height: 100px }
+
+#formSurveysCategories { left: 735px; top: 28px; width: 245px;	height: 289px; overflow: hidden; border-bottom: solid 1px #404040 }
+#formSurveysCategoriesGridView { top: 20px; height: 129px }
+#formSurveysCategoriesRecordView { top: 149px;	height: 100px }
+
+#formClassifiedsCategories { left: 0px; top: 335px; width: 245px;	height: 211px; overflow: hidden; border-right: solid 1px #404040 }
+#formClassifiedsCategoriesGridView { top: 20px; height: 96px }
+#formClassifiedsCategoriesRecordView { top: 116px;	height: 95px }
+
+/* Security ------------------------------------ */
+
+#formSecurityNeighbors { left: 0px;	top: 28px; width: 300px; height: 300px; overflow: hidden }
+#formSecurityNeighborsGridView { top: 0px; height: 100% }
+#formSecurityNeighborsRecordView { display: none }
+
+#formSecurityPets { left: 0px; top: 328px; width: 300px; height: 200px; overflow: hidden }
+#formSecurityPetsGridView { top: 20px; height: 80px }
+#formSecurityPetsRecordView { top: 100px; height: 100px }
+#formSecurityPetsRecordViewControls { top: 0 }
+
+#formSecurityVisitors { left: 300px;	top: 28px; width: 680px; height: 500px; overflow: hidden }
+#formSecurityVisitorsGridView { top: 20px; height: 100% }
+#formSecurityVisitorsRecordView { display: none }
+

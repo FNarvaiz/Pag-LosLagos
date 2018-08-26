@@ -1,0 +1,62 @@
+
+body {
+  font-family: "Trebuchet MS", Arial;
+}
+.hidden {
+  display: none;
+}
+#reportLogo {
+  font-size: 30pt;
+  text-align: center;
+  padding-bottom: 20pt;
+}
+#reportTitle {
+  font-size: 13pt;
+  font-weight: bold;
+  text-align: center;
+}
+#reportTimeStamp {
+  font-size: 9pt;
+  font-weight: normal;
+  text-align: center;
+}
+table.reportParams {
+  font-size: 10pt;
+  font-weight: bold;
+  margin: 6pt 0pt;
+}
+table.reportLevel1 {
+  font-size: 10pt;
+  margin: 6pt 0pt;
+  width: 100%;
+}
+table.reportLevel1 th {
+  font-weight: bold;
+  border-bottom: solid 0.5pt black;
+}
+table.reportLevel1 td {
+  padding-left: 2pt;
+  padding-right: 2pt;
+}
+table.reportLevel1 td.footer {
+  font-weight: bold;
+  border-top: solid 0.5pt black;
+}
+table.reportLevel2 {
+  font-size: 10pt;
+}
+table.reportLevel2 th {
+  font-weight: bold;
+  border-bottom: solid 0.5pt black;
+}
+table.reportLevel2 td {
+  padding-left: 2pt;
+  padding-right: 2pt;
+}
+table.reportLevel2 td.footer {
+  font-weight: bold;
+  border-top: solid 0.5pt black;
+}
+.sectionToggleBtn {
+  display: none;
+}

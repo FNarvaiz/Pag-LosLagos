@@ -1,0 +1,386 @@
+#mainMenu{
+    padding: 0px;
+    height: auto;
+}
+.left{
+    float: left;
+}
+.fila2, .fila{
+    padding-top: 4px;
+    height: 24px;
+    width: 100%;
+    text-align: center;
+}
+.turnOwnReservation{
+    padding: 3px;
+}
+.fila2 h5, .fila h5{
+    float: left;
+    padding-top: 4px;
+    padding-left: 22px;
+}
+.fila2{
+   background-color:  #f2f2f24a;
+}
+
+.headerTable h4{ 
+        display: inline-block;
+        width: auto;
+        padding: 4px;
+        margin: 0px;
+}
+section.headerTable {
+    text-align: center;
+}
+.fila2 *, .fila * {
+    height: auto;
+    display: inline;
+    width: auto;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 0px; 
+}
+#loginFormDiv{
+    margin-top: 20px;
+     background-color: rgba(0,0,0,0.8);
+     padding: 20px;
+     text-align: center;
+
+}
+#buttonIngresar{
+    border-radius: 0px;
+    color: #ffffff;
+    background-color: rgba(0, 255, 0, 0.5);
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+
+#loginFormDiv *{ 
+    width:100%;
+    padding-bottom: 10px;
+    font-size: 20;
+}
+.bookingsButtons {
+    display: inline-block;
+}
+ul{
+    height: auto;
+    width: 100%;
+    padding-left: 0px;
+    margin: 0px;
+}
+
+li {
+    font-size: 13px;
+    display: inline-block;
+    padding: 16px 8px 16px 8px;
+   /* background-color: #13c52f;*/
+}
+
+.days{
+    width: 60%;
+    background-color: rgba(0,0,0,0.8);
+    text-align: center;
+    color:white;
+    float:left;
+    padding: 2px;
+    border: solid 1px;
+}
+.days article p{
+    margin:0px;
+}
+.days h2,.hour{
+    margin-bottom: 2px;
+    margin-top: 2px;
+}
+.date{
+    display: inline-block;
+        border-right: dotted 1px #666666;
+        text-align: center;
+        width: 47%;
+        padding: 4px;
+}
+.date h4 {
+    font-size: 18;
+    margin: 0px;
+}
+.activityFirst,.activitySecond{
+    border-top:   dashed 1px;
+    width: 100%;
+}
+.activityFirst *,.activitySecond *{
+    width: auto;
+    height: auto;
+}
+#userMenu *{
+    width: auto;
+}
+#homeBG{
+    width: 38%;
+}
+#homeBG *{
+    width: 100%;
+}
+#timeLineRowLabels{
+width: 20%;
+}
+#timeLine{
+    width: 70%;
+}
+#timeLineContainer{
+    text-align: center;
+}
+#timeLineDetail{
+    width: 100%;
+    text-align: center;
+}
+
+.secondDate div h5{
+    display: none;
+
+}
+
+@media (max-width: 1160px) {
+    #PanelsBookingConten{width: 100%; float: none;text-align: center; display: flex; margin-bottom: 10px;}
+    #bookingsFormPanel{width: 40%}
+    #bookingsPanel{width: 60%;border-right: dotted 1px #666666;margin: 0px;}
+    #bookingsStatusPanel{width: 100%;}
+}
+@media (max-width: 950px) {
+    #mainMenuOption0,#mainMenuOption1,#mainMenuOption2,#mainMenuOption3,
+    #mainMenuOption5,#mainMenuOption6,#mainMenuOption7,
+    #mainMenuOption8,#copyright,#mainMenuOption9{
+        display: none;
+    }
+    #dynPanel{
+    text-align: center;
+    }
+
+    
+    #bookingsStatusPanel{
+        width: 58%;
+
+    }
+    #PanelsBookingConten{
+        float: left;
+        width: 40%;
+    }
+    .headerTable h4{
+        display: inline-block;
+        width: auto;
+    }
+    .noDisponible{
+        color: red;
+    }
+    #classifiedsTitle{
+        background-color: rgba(0,0,0,0.8);
+        padding: 5px;
+    }
+    .turnOwnReservation{
+        height: 100%;
+        padding-top: 3px;
+    }
+    #timeLineDetailIconsBg {
+        opacity: 0.8;
+      width: 90%;
+      }
+    #bookingsListing{
+        width: 100%;
+        height: auto;
+        padding: 4px;
+    }
+    div.bookingsButtons {
+    font-size: 20px;
+    height: auto;
+}
+    #bookingsButtons{
+        display: inline-block;
+    }
+
+    #bookingsFormPanel *{
+        width: auto;
+    }
+
+
+   
+    #bookingsPanel{margin-bottom: 5px;}
+    #bookingsPanel,#bookingsListing,#userMenu,#gbdLogo,#bookingsStatus, #bookingsFormPanel,#bookingsStatusPanel,#dynPanel,
+    #mainMenu,#dynPanelBg,#dialogbackgnd,#header,#dynPanelOverlay,#dataViewer,
+    #imgViewer,#footer,#main,#mainPanel,#loginDialog {
+        display: inline-block;
+        position: inherit;
+        height: auto;
+        width: 100%;
+    }
+    #navegadorLogin,#loginDialogImg,#loadingSignal,#dataViewer{
+        display: none;
+
+    }
+    #dynPanel{
+        background-size: cover;
+    }
+    #heightCenter{
+        display: grid;
+        min-height: 500px;
+        background-color: rgba(0,0,0,0.8);
+    }
+    #suppliersPanel{
+        padding: 5px;
+        height: auto;
+        width: 100%;
+    }
+
+    .supplierItem {
+        width: 48%;
+    }
+    .supplierItem *{
+        width: auto;
+    }
+    .supplierResult{display: grid;}
+    .espacio{width: 20px;}
+    #suppliersTitle{
+        padding: 10px;
+        background-color: rgba(0,0,0,0.8);
+        margin-bottom: 10px;
+    }
+    .backColor
+    {background-color: rgba(0,0,0,0.8);}
+    #suppliersCategories{padding: 10px;}
+    #formAdminProfileMainPanel,#formAdminProfile
+    {height: auto;}
+    #downloadsListingHeading{
+        width: 100%;
+        background-color: rgba(0,0,0,0.8);
+    }
+#bookingsStatusControls select{
+    font-size: 20px;
+    width: auto;
+}
+    #downloadsListing{
+        width: 100%;
+        height: auto;
+        background-color: rgba(0,0,0,0.8);
+    }
+    #helpPanel{
+        padding: 4px;
+        width: 100%;
+        height: auto;
+    }
+    .helpContac{
+        width: 250px;
+        color:#BBDCD2; 
+        font-size:13px; 
+        font-weight:bold;
+        padding: 3px;
+    }
+    .helpContac strong{
+        color: white;
+
+    }
+    .fila2, .fila{
+        height: 35px;
+    }
+    .fila2 *, .fila*{
+        font-size: 18;
+    }
+    input.loginDialogEditbox {
+    height: 40px;
+    }
+    .fila2 *, .fila *{
+        font-size: 20px;
+    }
+    #loginFormDiv span {
+        display: none;
+    }
+    #bookingsStatusTitle{
+        height: auto;
+    }
+    #bookingsStatusPanel,#bookingsPanel,#bookingsFormPanel{
+        background-color: rgba(0,0,0,0.8);
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+    #imgViewer{
+        display: none;
+    }
+    .helpContac *
+    {
+        width: auto;
+    }
+    .heightAuto{
+        height: auto;
+    }
+    #timeLineRowLabels table tbody tr {
+        height: 50px;
+        text-align: center;
+        padding-top: 14px;
+    }
+    #timeLineDetailIcons{
+        width:100%;
+    }
+    #timeLineDetailIcons table{
+        float:left;
+    }
+    #timeLineDetailIcons table tbody tr{
+        float:left;
+        width: 130px;
+    }
+    #timeLineDetailIcons table tbody tr *{
+        width: auto;
+    }
+    #mainMenu table,#mainMenu{font-size: 10px; height: auto;}    
+    #formProfile,#formProfilePets{margin-right: 300px;margin-left: 300px;}
+    #formProfile,#formProfileEventAttendees,#formProfileEvents,#formProfilePets{float:none;}
+}
+@media (max-width: 840px) {
+    .espacio{width: 5px;}
+    .supplierItem{width: 49%;}
+    #suppliersPanel{padding: 10px;}
+    div.supplierVote{margin: 0px;}
+    #PanelsBookingConten {display: inline-block;}
+    #bookingsPanel{width: 100%;border-right: none;margin-bottom: 5px;}
+     #bookingsFormPanel{width: 100%}
+    .days{width: 58%;}
+    #loginDialog{ padding: 50px 150px 50px 150px; }
+}
+
+@media (max-width: 767px) {
+    .espacio{width: 100%;}
+    .supplierItem{width: 100%;} 
+    .fila2 h5, .fila h5{ padding-left: 4px;}
+    .turnOwnReservation{font-size: 12px;}
+    #timeLineDetailIconsBg {  width: 80%;  }
+}
+@media (max-width: 660px) {
+    #wrapper{width:100%;}
+    #contactPanel{width:100%;float: initial;}
+   
+}
+@media (max-width: 580px) {
+    div.supplierCategory,div.supplierTitle,div.supplierDescription{width: 100%;}
+    #heightCenter{min-height: 0px; display: inline-block;padding: 4px;}
+    .date{ width: 100%;border-bottom: dotted 1px #666666;}
+    #bookingsListing table tbody tr { height: auto;}
+    .fila2 h5, .fila h5{ padding-left: 22px;}
+    .secondDate div h5{display: inline-block;}
+    .days ,#homeBG{width: 100%;padding: 0px; border: none; border-bottom: solid 1px #2ae813;}
+}
+@media (max-width: 480px) {
+    .descriptionVote{width: 100%;}
+
+    #bookingsStatusTitle{text-align: center;}
+    #bookingsStatusControls{float: none;}
+    #loginDialog,#registrationDialo,#passwordRecoveryDialog{padding: 0px}    
+    #loginDialog table,#registrationDialog table,#passwordRecoveryDialog table{padding: 10px ; border: 0px;width: 90%}
+    .day{width: 100%}
+}
+@media (max-width: 420px) {
+    input.loginDialogEditbox{width: 180px;}
+    #header h1{margin-top: 5px;margin-bottom: 5px}
+    
+    #loginDialog table{padding: 10px ; border: 0px;width: 90%}
+    td.interBtn{height: 30px;}
+}

@@ -1,0 +1,33 @@
+* {
+box-sizing: border-box;
+}
+body {
+ overflow-y: scroll;
+}
+#wrapper { margin:0; font-family:Arial; margin-top:20px; width: 620px; overflow-y: scroll; overflow-x: hidden;height:400px;}
+
+/* ------------------------------------ TABLA UNO ---------------------- */
+
+#tabla { margin:auto; margin-left::auto; margin-right:auto; }	
+
+#tabla table { margin:auto; width:600px; margin: 10px; padding: 10px; background-color:#fff;}
+
+#tabla td { font-size:12px; }
+
+#tabla p {  }
+
+#tabla .tip1 { color:#343A3F; }
+
+#tabla .tip2{ color:#768187; font-size: 11px }
+
+#tabla .tip3{ color:#768187; background-image:url('blanco.png'); background-repeat:no-repeat; background-color:transparent; bordeR:0; }
+
+
+#tabla hr { color:#D6D8D9; background-color: #D6D8D9; border:none; height:2px; }
+
+/* ------------------------------------ TABLA DOS ---------------------- */
+
+#info { width:800px; margin:20px; }
+#info h2{ font-size:20px; }
+#info table { color:white; font-size:15px; }
+	
