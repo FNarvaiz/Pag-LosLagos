@@ -307,7 +307,6 @@ function renderClubHouseBookingsStatus(resourceId)
         end if
         if not (contador>1 and resourceId=29) then
           if (rs("ESTADO") ="No disponible") then 
-            oddRow = not oddRow
             if(resourceId=29) then 
                 rowClass="date secondDate"
             else
