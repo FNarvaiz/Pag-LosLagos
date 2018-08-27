@@ -18,16 +18,24 @@ function renderloginDialog
     <form id="loginFormDiv" name="loginForm" onsubmit="login(this.usr.value, this.pwd.value); return false;">
         <div>
           <label id="usuario"><%= eval("loginDialogUsrFieldLabel" & lang) %></label>
-          <input name="usr" type="text" class="loginDialogEditbox" value="">
+          <input placeholder="Usuario" name="usr" type="text" class="loginDialogEditbox" value="">
         </div>
         <div>
             <label id="pass"><%= eval("loginDialogPwdFieldLabel" & lang) %></label>
-          	<input name="pwd" type="password" class="loginDialogEditbox" value="">
+            <input placeholder="Clave" name="pwd" type="password" class="loginDialogEditbox" value="">
         </div>
-        <input id="buttonIngresar" type="submit" value="► <%= eval("loginDialogSubmitBtnLabel" & lang) %>" class="loginDialogBtn">
-        <span class="anchor" onclick="load(null, 'passwordRecoveryDialog')"><%= eval("loginDialogPasswordRecoveryBtnLabel" & lang) %></span> 
+        <span class="anchor" id="errorMessage"></span> 
+        <input class="buttonIngresar" type="submit" value="<%= eval("loginDialogSubmitBtnLabel" & lang) %>" class="loginDialogBtn">
+        
+        <span class="anchor" id="recoveryPassword" onclick="load(null, 'passwordRecoveryDialog')"><%= eval("loginDialogPasswordRecoveryBtnLabel" & lang) %></span> 
     </form>
   </div>
+   <div id="logo">
+    <img src="front-end/resource/logoGrande.jpg">
+  </div>
+  <!--<span class="redirect" onclick="load(this, 'registrationDialog')">Todavia no tienes cuenta ></span>-->
+  <span class="redirect" onclick="load(this, 'passwordRecoveryDialog')">No puedo ingresar ></span>
+  <span class="redirect" onclick="load(this, 'faq')">Términos y condiciones</span>
   <div id="loginDialogImg"><img src="front-end/resource/login.png" onload="document.getElementById('main').style.visibility = 'visible'; document.loginForm.usr.focus();"></div>
   <%
 end function
@@ -180,30 +188,19 @@ function renderPasswordRecoveryDialog
       <input type="hidden" name="content" value="sendPasswordRecoveryMessage">
       <input type="hidden" name="lang" value="<%= lang %>">
       <input type="hidden" name="trackingLabel" value="recupero de clave">
-    	<center>
-        <table width="100%" cellpadding="6px" cellspacing="0" border="0">
-          <tr>
-            <td colspan="2" align="left"><%= eval("passwordRecoveryDialogTitle" & lang) %>
-              <div style="width: 100%; height: 1px; font-size: 1px; background-color: #e0e0e0; margin-top: 8px; margin-bottom: 8px"></div> 
-            </td>
-          </tr>
-          <tr>
-            <td width="80px" align="center"><%= eval("passwordRecoveryDialogUsrFieldLabel" & lang) %></td>
-          	<td><input name="usr" type="text" class="passwordRecoveryDialogEditbox" value=""></td>
-          </tr>
-          <tr>
-            <td colspan="2" align="center">
-              <span style="color: #00c080">►</span><input type="button" value="CANCELAR"
-                class="loginDialogBtn" onclick="document.getElementById('loginMenuItem').click();">&nbsp;&nbsp;&nbsp;&nbsp;
-              <span style="color: #00c080">►</span><input type="button" value="<%= eval("passwordRecoveryDialogSubmitBtnLabel" & lang) %>" 
-                class="loginDialogBtn" onclick="sendFormData('passwordRecoveryForm')">
-            </td>
-          </tr>
-        </table>
-    	</center>
+      <h4>Recuperar clave</h4>
+      <p><%= eval("passwordRecoveryDialogTitle" & lang) %></p>
+        <div>
+          <label id="usuario"><%= eval("passwordRecoveryDialogUsrFieldLabel" & lang) %></label>
+          <input  autofocus placeholder="<%= eval("passwordRecoveryDialogUsrFieldLabel" & lang) %>" name="usr" type="text" class="loginDialogEditbox" value="">
+        </div>
+        <span class="anchor" id="errorMessage"></span> 
+        <input class="buttonIngresar" type="submit" value="<%= eval("passwordRecoveryDialogSubmitBtnLabel" & lang) %>"  class="loginDialogBtn">
+        <input type="button" value="CANCELAR"
+                class="buttonIngresar" onclick="document.getElementById('loginMenuItem').click();">
     </form>
   </div>
-  <div id="loginDialogImg"><img src="front-end/resource/login.png" onload="document.getElementById('main').style.visibility = 'visible'; document.passwordRecoveryForm.usr.focus();"></div>
+  <div id="loginDialogImg"><img src="front-end/resource/login.png" onload="document.getElementById('main').style.visibility = 'visible'; "></div>
   <%
 end function
 

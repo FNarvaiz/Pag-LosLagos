@@ -20,6 +20,10 @@ dim serverApp: serverApp = "front-end/main.asp"
 function renderMainMenu
   if getUsrData then
     %>
+    <div id="espacio"></div>
+    <div onclick="menu()" class="menu_bar">
+      <span>Vecinos del los Lagos</span>
+    </div>
     <ul id="navegador">
       <%
       dim labels
@@ -37,6 +41,10 @@ function renderMainMenu
     <%
   else
     %>
+    <div id="espacio"></div>
+    <div onclick="menu()" class="menu_bar">
+      <span>Vecinos del los Lagos</span>
+    </div>
     <ul id="navegadorLogin">
       <li class="btn anchor" onclick="showLoginDialog()" id="loginMenuItem"><%= eval("loginMenuItem" & lang) %></li>
       <li class="btn anchor" onclick="load(this, 'registrationDialog')"><%= eval("registrationMenuItem" & lang) %></li>
@@ -93,12 +101,57 @@ function renderHome
       %>
     </table>
   </div>
-  <iframe id="schedule" src="contenidos/tableroInicio.html"></iframe>
+  <div id="schedule" >
+    <section class="days">
+      <h2>Entrenamiento Funcional</h2>
+      <article class="activityFirst">
+        <h3 class="hour">Lunes, Miercoles y Viernes</h3>
+        <p >
+          8:30 a 9:30 hs
+        </p>
+      </article>
+      <article class="activitySecond">
+        <h3 class="hour">Martes y Jueves</h3>
+        <p >
+           20:00 a 21:00 hs
+        </p>
+      </article>
+    </section>
+    <section class="days">
+      <h2>Esc de Gim deportiva, Hockey y Fútbol</h2>
+      <article class="activityFirst">
+        <h3 class="hour">Martes y Jueves</h3>
+        <p >
+          17:30 a 19:00 hs
+        </p>
+      </article>
+       <article class="activitySecond">
+        <h3 class="hour">Sabado</h3>
+        <p >
+          9:30 a 13:00 hs
+        </p>
+      </article>
+    </section>
+    <section class="days">
+      <h2>Fútbol Femenino (Suspende por lluvia)</h2>
+      <article class="activityFirst">
+        <h3 class="hour">Viernes</h3>
+        <p >
+          9:30 a 11:00 hs
+        </p>
+      </article>
+    </section>
+    <section class="days">
+      <h2>Tenis infantil grupal</h2>
+      <article class="activityFirst">
+        <h3 class="hour">Sabado</h3>
+        <p >
+          10:00 a 11:00 hs
+        </p>
+      </article>
+    </section>
+ </div>
   <%
-  'if dbGetData("SELECT HTML FROM CONTENIDOS WHERE ID=10") then
-   '' response.write(rs(0))
-  'end if
-  'dbReleaseData
   logActivity "Inicio", ""
 end function
 
@@ -106,7 +159,44 @@ function renderFAQ
   dim url: url = "contenidos/faq/faq.html"
   %>
   <div id="dynPanelBg"></div>
-  <iframe id="contentsPanel" src="<%= url %>"></iframe>
+  <div id="contentsPanel">
+    <div id="wrapper">
+      <div id="qs">
+        <h1><img src="contenidos/faq/signo.png" /> PREGUNTAS FRECUENTES</h1>
+        <table width="800" cellpadding="10" cellspacing="5" >
+          <tr>
+            <td width="50%" class="preg" valign="top">
+              <h2>Olvidé mi contraseña. ¿Cómo la recupero?</h2>
+              <p>Es común no recordar este tipo de cosas.<br>Para recuperarla, en la pantalla de ingreso al sistema 
+              hacé clic en “Olvidé mi contraseña”. Allí escribí el e-mail con el que te registraste, y el sistema te enviará la contraseña.</p>
+            </td>
+            <td class="preg" width="50%" valign="top">
+              <h2>Si poseo más de un lote, ¿puedo visualizar los datos de todos ellos a la vez?</h2>
+              <p>No. Cada usuario representa a un lote. Por ello, al poseer más de uno deberás ingresar de manera individual
+              para visualizar la información de cada uno.</p>
+            </td>
+          </tr>
+          
+          <tr>
+            <td colspan="1" class="preg" width="50%" valign="top">
+              <h2>No puedo ingresar al sistema. ¿Qué hago?</h2>
+              <p>Antes que nada asegúrate de ingresar correctamente tu e-mail y tu contraseña.
+              Si continúas experimentando problemas, por favor, ponete en contacto con nosotros.</p>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="1" class="preg" width="50%" valign="top">
+              <h2>¿Cómo cambio mi contraseña?</h2>
+              <p>Una vez que hayas ingresado al sistema, al pie de la pantalla hacé clic en “Cambiar contraseña”.
+              Luego ingresá tu contraseña actual y la nueva que hayas elegido.
+              Recordá que es aconsejable cambiar periódicamente la contraseña.</p>
+            </td>
+          </tr>
+          
+        </table>
+      </div>
+    </div>
+  </div>
   <div id="contactPanel">
     Envianos tu consulta a <a href="mailto:info@vecinosloslagos.com.ar">info@vecinosloslagos.com.ar</a><br>
     o mediante el siguiente formulario.
@@ -160,6 +250,73 @@ function renderAbout
   %>
   <div id="dynPanelBg"></div>
   <iframe id="aboutContentPanel" scrolling="no" src="<%= url %>"></iframe>
+  <div id="aboutResponsive">
+    <section id="tabla">
+      <article class="artAbout">
+        <img src="contenidos/about/iconos/2.png"/>
+        <title>Comisión Arquitectura</title>
+        <p>Paola Baglietto, Paula Salinas, Guadalupe Roberi</p>
+        <p>arquitecturaloslagos@gmail.com</p>
+      </article>
+      <article class="artAbout">
+        <img src="contenidos/about/iconos/12.png"/>
+        <title>Comisión Laguna</title>
+        <p>Matías Bonta, Héctor Filice</p>
+        <p>lagunaloslagos@gmail.com</p>
+      </article>
+      <article class="artAbout">
+        <img src="contenidos/about/iconos/1.png"/>
+        <title>Comisión Seguridad</title>
+        <p>Marcelo Torassa, Gerardo Missan, Martin Guinart, Fernando Mauro, Alberto Monte</p>
+        <p>segloslagos@gmail.com</p>
+      </article>
+      <article class="artAbout">
+        <img src="contenidos/about/iconos/5.png"/>
+        <title>Comisión Comunicación</title>
+        <p>Florencia De Bella, Diego Sanchez Cavalieri, Martín Isola, Gabriela Arjona, Michelle Faour (Cultura)</p>
+        <p>comunicacionloslagos@gmail.com</p>
+      </article>
+      <article class="artAbout">
+        <img src="contenidos/about/iconos/4.png"/>
+        <title>Comisión Deportes Y Recreación</title>
+        <p>Carlos Coronel, Edgardo Bravi, Juan Carlos Morales, Mariano Farina, Pedro Lares</p>
+         <p>deportesloslagos@gmail.com</p>
+      </article>
+      <article class="artAbout">
+        <img src="contenidos/about/iconos/6.png"/>
+        <title>Comisión Auditoria Y Presupuesto</title>
+    <p>Florencia De Bella, Sebastian Schvartzman, Leonardo Seoane, Lucas Kichic, Anamá Ferreira</p>
+        <p>presupuestoloslagos@gmail.com</p>
+      </article>
+      <article class="artAbout">
+        <img src="contenidos/about/iconos/3.png"/>
+        <title>Comsion Espacios Verdes</title>
+        <p>Javier Speziale, Aníbal Montes</p>
+        <p>espaciosverdesloslagos@gmail.com</p>
+      </article>
+      <article class="artAbout">
+        <img src="contenidos/about/iconos/7.png"/>
+        <title>Comsion Tribunal de Disciplina</title>
+        <p>Titulares: Marcelo Torassa, Martín Guinart, Diego Sánchez Cavalieri. Suplentes: Federico Georgiatis, Gabriela Sebess.</p>
+        <p>tribunaldedisciplinaloslagos@gmail.com</p>
+      </article>
+      <article class="artAbout">
+        <img src="contenidos/about/iconos/4.png"/>
+        <title>Comsion Club House y Deportes</title>
+        <p>Claudia Rueda, Daniel Ini, Soraya Uribe, Ramiro López</p>
+        <p>clubhouseloslagos@gmail.com</p>
+      </article>
+      
+        
+    </section>  
+  
+    
+  <div id="infoResponsive">
+  Intendente : Adrian Garcia . <br />Intendentes  Auxiliares : <br /> Seguridad: Carla Gonzales, <br /> Obras:Luciano Padin, Gustavo Piva. General: Horacio Najle.    
+    
+  </div>  
+  
+</div>
   <div id="aboutContactPanel">
     <span style="font-size: 14px">Mensajes a la Administración</span><br><br>
     &nbsp;&nbsp;&nbsp;&nbsp;Por favor, completá el siguiente formulario<br>

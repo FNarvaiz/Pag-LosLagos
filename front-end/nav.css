@@ -1,0 +1,72 @@
+.menu_bar,#espacio {
+	display:none;
+}
+
+#navegador{
+        overflow:hidden;
+        width: 1000px;
+        transition:all 0.4s ease-in-out 0s;
+}
+#navegador li:hover {
+	background-color:  #61e1ef;
+}
+@media screen and (max-width: 800px) {
+	
+	 #espacio,.menu_bar{
+		display: block;
+		width: 100%;
+		height: 49px;
+	 }
+	.menu_bar {
+		position: fixed;
+		top:0;
+		height: auto;
+		padding: 7 13; 
+		background-image: linear-gradient(#070779, #61e1ef);
+		background-color: #070779;
+		z-index: 110;
+		height: 50;
+		text-align: center;
+	}
+ 	.menu_bar img{
+			float: right;
+		
+ 	}
+	.menu_bar, #navegador {
+		display: block;
+		color: #fff;
+		overflow: hidden;
+		font-weight: bold;
+		text-decoration: none;
+	}
+ 
+	.menu_bar span {
+		font-weight: lighter;
+		font-size: 25px;
+	}
+ 	
+	#navegador {
+		width: 50%;
+		/*height: calc(100% - 80px);*/
+		position: fixed;
+		right:100%;
+		top:50px;
+		margin: 0;
+		z-index: 100;
+    	background-color: #06061f;
+		
+	}
+	#mainMenuOption0,#mainMenuOption1,#mainMenuOption2,#mainMenuOption3,#mainMenuOption4,#mainMenuOption6,#mainMenuOption7 {
+		padding: 12 8 12 16;
+		display: block;
+		border-bottom:1px solid rgba(255,255,255,.5);
+		transition:all 0.4s ease-in-out 0s;
+	}
+	
+    #mainMenuOption5,#mainMenuOption8,#copyright{
+        display: none;
+    }
+ 
+	
+ 
+}

@@ -3,12 +3,12 @@
 dim lang: lang = getStringParam("lang", 2): if isNull(lang) then lang = "SP"
 
 dim mainMenuLabelsSP
-mainMenuLabelsSP = array("INICIO", "QUIENES&nbsp;SOMOS", "HISTÓRICO", "DOCUMENTOS", "RESERVAS", "AVISOS", "ENCUESTAS", "PROVEEDORES", "MI PERFIL", "AYUDA")
+mainMenuLabelsSP = array("Inicio", "Quienes&nbsp;somos", "Hístorico", "Documentos", "Reservas", "Avisos", "Encuestas",  "Mi perfil", "Ayuda")
 dim mainMenuLabelsEN
 mainMenuLabelsEN = array("HOME", "ABOUT US", "TIME CHART", "LISTING", "CLASSIFIEDS", "RESERVATIONS", "SURVEYS", "CONTRACTORS", "MY PROFILE", "HELP")
 
 dim mainMenuContents
-mainMenuContents = array("home", "about", "timeLine", "downloads", "bookings", "classifieds", "surveys", "suppliers", "profile", "help")
+mainMenuContents = array("home", "about", "timeLine", "downloads", "bookings", "classifieds", "surveys","profile", "help")
 'mainMenuContents = array("home", "timeLine", "downloads", "bookings", "classifieds", "surveys", "suppliers", "help")
 
 const noDataMsgSP = "(No hay datos disponibles en este momento.)"

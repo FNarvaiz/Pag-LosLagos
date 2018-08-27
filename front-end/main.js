@@ -4,7 +4,7 @@ var loadingSignalId = "loadingSignal";
 var lang = "SP";
 var sessionId = "";
 var usrName = "";
-
+var contador;
 function track(category, action, label)
 {
   try
@@ -13,7 +13,22 @@ function track(category, action, label)
   }
   catch(e) {}
 }
-
+function menu () {
+  if(contador!=undefined){
+    if (contador == 1) {
+      var elem=document.getElementById("navegador");
+      if(elem!=null)
+        elem.style.left="0px";
+      else
+        document.getElementById('loginMenuItem').click();
+      contador = 0;
+    } else {
+      contador = 1;
+      document.getElementById("navegador").style.left="-100%";
+      
+    }
+  }
+}
 function placeMainElements()
 {
   var elem = document.getElementById("mainPanel");
@@ -81,6 +96,7 @@ function login(usr, pwd)
       }
       else
       {
+        document.getElementById("dynPanel").style.backgroundColor= "#badbe0";
         sessionId = response.sessionId;
         usrName = response.usrName;
         track("sesion", "login OK", "Familia " + usrName);
@@ -439,12 +455,14 @@ function mainMenuOptionChanged(elem)
   {
     mainMenuSelectedOption.style.backgroundImage = "";
     mainMenuSelectedOption.style.color = "";
+    mainMenuSelectedOption.style.borderLeft="";
   }
 	mainMenuSelectedOption = elem;
   if (mainMenuSelectedOption)
   {
     mainMenuSelectedOption.style.backgroundImage = "url(front-end/resource/menuBtnBgSelected.png)";
     mainMenuSelectedOption.style.color = "#404040";
+    mainMenuSelectedOption.style.borderLeft="4px solid #31cccc";
   }
 }
 
@@ -455,56 +473,69 @@ function isJSON(text)
 
 function load(menuElement, contentId)
 {
-  mainMenuOptionChanged(menuElement);
-  ajaxGetText(appServer + "?lang=" + lang + "&sessionId=" + sessionId + "&content=" + contentId, "", loadingSignalId,
-    function() {
-      if (isJSON(ajaxResponseText))
-      {
-        eval("var response = (" + ajaxResponseText + ")");
-        if (response.result == "failed")
+  contador = 1;
+  if (document.body.clientWidth<900) {
+   
+   if(contentId!="faq" && contentId!="registrationDialog" && contentId!="passwordRecoveryDialog" && contentId!="loginMenuItem")
+      document.getElementById("navegador").style.left="-100%";
+
+  }
+
+  if((contentId=="profile" || contentId=="timeLine") && document.body.clientWidth<900){
+    document.getElementById("dynPanel").innerHTML="<div class='noView'>Esta sección se ve solo en pantalla grande para un mejor funcionamiento.</div>";
+  }
+  else{
+    mainMenuOptionChanged(menuElement);
+    ajaxGetText(appServer + "?lang=" + lang + "&sessionId=" + sessionId + "&content=" + contentId, "", loadingSignalId,
+      function() {
+        if (isJSON(ajaxResponseText))
         {
-          alert(response.message);
-          showLoginDialog();
+          eval("var response = (" + ajaxResponseText + ")");
+          if (response.result == "failed")
+          {
+            alert(response.message);
+            showLoginDialog();
+          }
+        }
+        else
+        {
+          track("seccion", (!menuElement ? "" : menuElement.innerHTML) , "Familia " + usrName);
+          document.getElementById("dynPanel").innerHTML = ajaxResponseText;
+          switch (contentId)
+          {
+            case "downloads":
+              document.getElementById("downloadsCategorySelector").selectedIndex = 0;
+              document.getElementById("downloadsCategorySelector").onchange();
+              break;
+            case "timeLine":
+              var container = document.getElementById("timeLineGridContainer");
+              if (container.scrollWidth <= container.offsetWidth)
+                document.getElementById("timeLineArrows").style.visibility = "hidden";
+              else
+              {
+                document.getElementById("timeLineArrows").style.visibility = "visible";
+                container.scrollLeft = container.scrollWidth - container.offsetWidth;
+              }
+              timeLineColumnSelectedIdx = -1;
+              timeLineDataTypeSelected = -1;
+              eval(document.getElementById("javascriptCode").innerHTML);
+              break;
+            case "surveys":
+              prepareTwoColumnsLayout("surveys");
+              break;
+            case "classifieds":
+              document.getElementById("classifiedsCategorySelector").selectedIndex = 0;
+              document.getElementById("classifiedsCategorySelector").onchange();
+              break;
+            case "profile":
+              loadFormContainer("formAdminProfile", "dynPanel");
+              refreshCurrentForm = false;
+              break;
+          }
         }
       }
-      else
-      {
-        track("seccion", (!menuElement ? "" : menuElement.innerHTML) , "Familia " + usrName);
-        document.getElementById("dynPanel").innerHTML = ajaxResponseText;
-        switch (contentId)
-        {
-          case "downloads":
-            document.getElementById("downloadsCategorySelector").selectedIndex = 0;
-            document.getElementById("downloadsCategorySelector").onchange();
-            break;
-          case "timeLine":
-            var container = document.getElementById("timeLineGridContainer");
-            if (container.scrollWidth <= container.offsetWidth)
-              document.getElementById("timeLineArrows").style.visibility = "hidden";
-            else
-            {
-              document.getElementById("timeLineArrows").style.visibility = "visible";
-              container.scrollLeft = container.scrollWidth - container.offsetWidth;
-            }
-            timeLineColumnSelectedIdx = -1;
-            timeLineDataTypeSelected = -1;
-            eval(document.getElementById("javascriptCode").innerHTML);
-            break;
-          case "surveys":
-            prepareTwoColumnsLayout("surveys");
-            break;
-          case "classifieds":
-            document.getElementById("classifiedsCategorySelector").selectedIndex = 0;
-            document.getElementById("classifiedsCategorySelector").onchange();
-            break;
-          case "profile":
-            loadFormContainer("formAdminProfile", "dynPanel");
-            refreshCurrentForm = false;
-            break;
-        }
-      }
-    }
-  );
+    );
+  }
 }
 
 function prepareTwoColumnsLayout(contentId)

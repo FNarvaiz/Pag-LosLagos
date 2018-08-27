@@ -77,6 +77,7 @@ includeStyleSheet("front-end/main.css")
 includeStyleSheet("front-end/timeLine.css")
 includeStyleSheet("front-end/forms/datePicker.css")
 
+
 includeSript("front-end/main.js")
 includeSript("front-end/ajax.js")
 includeSript("front-end/timeLine.js")
@@ -84,7 +85,7 @@ includeSript("front-end/misc.js")
 includeSript("front-end/forms/datePicker.js")
 includeSript("front-end/forms/utils.js")
 includeStyleSheet("front-end/mediaQuery.css")
-
+includeStyleSheet("front-end/nav.css")
 
 %>
 <!--#include file="front-end/utils/googleAnalytics.asp"-->
