@@ -29,6 +29,24 @@ function menu () {
     }
   }
 }
+function bookingsSendRequest2(bookingDate, turnId)
+{
+  if (!bookingDate || !turnId) {
+    alert("Por favor, completá todos los datos para poder solicitar la reserva.");
+    return;
+  }
+  ajaxGetText(appServer + "?lang=" + lang + "&sessionId=" + sessionId + "&content=bookingsSendRequest" + 
+    "&bookingDate=" + encodeURIComponent(bookingDate) + "&turnId=" + turnId, "", loadingSignalId,
+    function() {
+      eval("var response = " + ajaxResponseText);
+      if (response.message) {
+        alert(response.message);
+        document.getElementById("bookingsFormDate").value = "";
+        document.getElementById("bookingsFormTurn").selectedIndex = 0;
+      }
+    }
+  );
+}
 function placeMainElements()
 {
   var elem = document.getElementById("mainPanel");

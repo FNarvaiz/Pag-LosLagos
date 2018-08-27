@@ -455,6 +455,9 @@ section.headerTable {
     }
     
     /*--------------------------------- RESERVAS -------------------------------*/
+    span.bookingsTypeButton.ajusteText {
+        padding-bottom: 10;
+    }
     .date h4{
         font-size: 30px;
         width: auto;

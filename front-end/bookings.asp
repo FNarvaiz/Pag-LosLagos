@@ -276,26 +276,61 @@ function renderClubHouseBookingsStatus(resourceId)
   <section class='headerTable'>
       <h4>FECHA</h4>
       <h4>TURNO</h4>
-      <h4>ESTADO</h4>
+      
   </section>
     <% 
-    if dbGetData("SELECT FECHA, dbo.NOMBRE_TURNO(INICIO, DURACION) AS TURNO,ESTADO " & _
-        "FROM dbo.ESTADOS_RESERVAS(" & resourceId & ") ORDER BY FECHA, INICIO") then
-      dim rowClass
+    if dbGetData("SELECT F.FECHA, T.INICIO, T.DURACION, dbo.NOMBRE_TURNO(INICIO, DURACION) AS TURNO, T.ID,T.DIAS, " & _
+       " dbo.ID_VECINO_TURNO_RESERVA(" & resourceId & ", F.FECHA, T.INICIO) as vecinoID, " & _
+        "dbo.ESTADO_TURNO_RESERVA(" & resourceId & ", F.FECHA, T.INICIO, T.DURACION)as ESTADO " & _
+      "FROM dbo.LISTA_FECHAS_HOME() AS F " & _
+      "CROSS JOIN dbo.RESERVAS_TURNOS(" & resourceId & ") T order by F.Fecha ASC, ESTADO DESC") then
+      dim disponible: disponible = true
+      dim fecha: fecha = -1
+      dim d: d = dateSerial(2000, 1, 1)
+      dim rowClass: rowClass ="PF"
       dim oddRow: oddRow = false
       do while not rs.EOF
-        if oddRow then rowClass = "fila2" else rowClass = "fila"
-        if(rs("ESTADO") ="No disponible")then rowClass = rowClass & " noDisponible" end if 
-        oddRow = not oddRow
-        %>
-        <div class="<%= rowClass %>">
-          <div><%= rs("FECHA") %></div>
-          <div><%= rs("TURNO") %></div>
-          <div><%= rs("ESTADO") %></div>
-        </div>
-        <%
+        if d <> rs("FECHA") and disponible and rowClass <>"PF" then  %>  </div>  <%  end if
+        
+        if (rs("ESTADO") ="No disponible") then 
+          if oddRow then rowClass = "fila2" else rowClass = "fila"
+          rowClass = rowClass & " noDisponible"  
+          oddRow = not oddRow
+          disponible=false
+          d=rs("FECHA")
+          %>
+          <div class="<%= rowClass %>">
+            <div class="rowText left"><%= day(d) %>/<%= month(d) %></div>
+            <div class="rowText"><%= rs("TURNO") %></div>
+          </div>
+          <%
+        elseif d <> rs("FECHA") then
+          if ( InStr(rs("DIAS"),Weekday(rs("FECHA"),1))<>0) then
+            if oddRow then rowClass = "fila2" else rowClass = "fila"
+              oddRow = not oddRow
+            d=rs("FECHA")
+            disponible=true
+            %>
+            <div class="<%= rowClass %>">
+            <div class="rowText left" title="<%= weekdayname(weekday(rs("FECHA"))) %>" ><%= day(d) %>/<%= month(d) %></div>
+            <span class="bookingsTypeButton ajusteText" title="Reservar <%= rs("TURNO") %>"
+              onclick="bookingsSendRequest2( '<%= day(d) %>/<%= month(d) %>/<%= year(d) %>', <%= rs("ID") %>)"> <%= rs("TURNO")%></span>
+            <%
+          end if
+        elseif disponible then
+          if ( InStr(rs("DIAS"),Weekday(rs("FECHA"),1))<>0) then
+            %>
+            <span class="bookingsTypeButton ajusteText" title="Reservar <%= rs("TURNO") %>"
+              onclick="bookingsSendRequest2( '<%= day(d) %>/<%= month(d) %>/<%= year(d) %>', <%= rs("ID") %>)"> <%= rs("TURNO")%></span>
+           
+            <%
+          end if
+         
+        end if
+         
         rs.moveNext
       loop
+      if disponible then  %> </div> <% end if
     else
       %>
       <div>(No se han realizado reservas)</div>
