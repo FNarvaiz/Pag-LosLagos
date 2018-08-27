@@ -8,6 +8,12 @@
 .redirect{
     display: none;
 }
+.buttonCancha{
+        width: 100%;
+        display: inline-block;
+        padding: 3px;
+        margin-bottom: 2px;
+    }
 #errorMessage {
     display: inline-block;
     color: red;
@@ -455,6 +461,7 @@ section.headerTable {
     }
     
     /*--------------------------------- RESERVAS -------------------------------*/
+    
     span.bookingsTypeButton.ajusteText {
         padding-bottom: 10;
     }
