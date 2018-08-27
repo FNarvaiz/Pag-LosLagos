@@ -307,6 +307,7 @@ function renderClubHouseBookingsStatus(resourceId)
         end if
         if not (contador>1 and resourceId=29) then
           if (rs("ESTADO") ="No disponible") then 
+
             if(resourceId=29) then 
                 rowClass="date secondDate"
             else
@@ -316,16 +317,20 @@ function renderClubHouseBookingsStatus(resourceId)
                 rowClass = "fila" 
               end if
               rowClass = rowClass & " noDisponible"  
-              oddRow = not oddRow
+              
             end if 
-            disponible=false
-            d=rs("FECHA")
-            %>
-            <div class="<%= rowClass %>">
-              <div class="rowText left"><%= day(d) %>/<%= month(d) %></div>
-              <div class="rowText"><%= rs("TURNO") %></div>
-            </div>
-            <%
+            if d <> rs("FECHA") OR resourceId=29 then 
+              disponible=false
+              d=rs("FECHA")
+              oddRow = not oddRow
+              %>
+              <div class="<%= rowClass %>">
+                <div class="rowText left"><%= day(d) %>/<%= month(d) %></div>
+                <div class="rowText">No disponible</div>
+              </div>
+              
+              <%
+            end if
           elseif d <> rs("FECHA") then
             if ( InStr(rs("DIAS"),Weekday(rs("FECHA"),1))<>0) then
               if(resourceId=29) then 
