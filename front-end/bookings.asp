@@ -310,11 +310,15 @@ function renderClubHouseBookingsStatus(resourceId)
             oddRow = not oddRow
             if(resourceId=29) then 
                 rowClass="date secondDate"
-              else
-                if oddRow then rowClass = "fila2" else rowClass = "fila"
-                rowClass = rowClass & " noDisponible"  
-                oddRow = not oddRow
-              end if 
+            else
+              if oddRow then 
+                rowClass = "fila2" 
+              else 
+                rowClass = "fila" 
+              end if
+              rowClass = rowClass & " noDisponible"  
+              oddRow = not oddRow
+            end if 
             disponible=false
             d=rs("FECHA")
             %>
@@ -328,8 +332,12 @@ function renderClubHouseBookingsStatus(resourceId)
               if(resourceId=29) then 
                 rowClass="date secondDate"
               else
-                if oddRow then rowClass = "fila2" else rowClass = "fila"
-                  oddRow = not oddRow
+                if oddRow then 
+                  rowClass = "fila2" 
+                else 
+                  rowClass = "fila"
+                end if 
+                oddRow = not oddRow
               end if 
               d=rs("FECHA")
               disponible=true
