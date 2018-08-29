@@ -64,7 +64,7 @@ includeSript("forms/forms.js")
 includeSript("forms/session.js")
 includeSript("forms/datePicker.js")
 
-includeSript("../fckeditor/fckeditor.js")
+'includeSript("../fckeditor/fckeditor.js")
 
 %>
 </head>
