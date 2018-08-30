@@ -62,9 +62,10 @@ function formResourceBookingsBeforeUpdate
     exit function
   end if
   dim ok
-  dbGetData("SELECT dbo.TURNO_RESERVA_VALIDO(" & resourceId & ", " & turnStart & ", " & turnDuration & ")")
-  ok = rs(0)
-  dbReleaseData
+  'dbGetData("SELECT dbo.TURNO_RESERVA_VALIDO(" & resourceId & ", " & turnStart & ", " & turnDuration & ")")
+  'ok = rs(0)
+  ok= true
+  'dbReleaseData
   if not ok then
     formResourceBookingsBeforeUpdate = reportError(resourceName & ": el turno indicado no es válido.")
     exit function
@@ -141,7 +142,7 @@ function jBookingStartOptions(neighborId, resourceId, bookingTypeId)
     JSONAddStr "bookingStartOptions", ""
   elseif isNull(neighborId) or not isNull(bookingTypeId) then
     dim b: b = dbConnect
-    dbGetData("SELECT DISTINCT ID, NOMBRE FROM RESERVAS_TURNOS(" & resourceId & ") ORDER BY ID")
+    dbGetData("SELECT  ID, NOMBRE FROM RESERVAS_TURNOS(" & resourceId & ") ORDER BY ID")
     JSONAddArray "bookingStartOptions", rs.getRows, array("id", "name")
     dbReleaseData
     if b then dbDisconnect
