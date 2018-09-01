@@ -68,9 +68,8 @@ function renderBookingListing
       "ORDER BY R.ID_RECURSO,R.FECHA, R.INICIO") then
       %>
         <center>
-        <table class="reportLevel1" cellpadding="3" cellspacing="0" style="width: 40%">
+        <table class="reportLevel1" cellpadding="4" cellspacing="0" style="width: 40%">
         <thead>
-        <tr><th colspan="3"><b><%= rs("RECURSO") %></b></tr>
         <tr>
           <th><b>Fecha</b></th>
           <th><b>Turno</b></th>
@@ -84,7 +83,7 @@ function renderBookingListing
     do while not rs.EOF
       if resourceName <> rs("RECURSO") then
           resourceName = rs("RECURSO")
-          %><tr colspan="4" align="center"><%=resourceName %></tr><%
+          %><tr ><td colspan="4" align="center"><%=resourceName %></td></tr><%
       end if
       %>
       <tr>
