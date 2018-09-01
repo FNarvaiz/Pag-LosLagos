@@ -59,36 +59,36 @@ function renderBookingListing
   else
     s = " AND R.ID_RECURSO = " & resourceId & " "
   end if
-  if dbGetData("SELECT dbo.NOMBRE_RECURSO_RESERVA(ID_RECURSO) AS RECURSO, " & _
+  if dbGetData("SELECT R.FECHA,dbo.NOMBRE_RECURSO_RESERVA(ID_RECURSO) AS RECURSO, " & _
       "dbo.NOMBRE_TURNO(R.INICIO, R.DURACION) AS TURNO, " & _
       "V.UNIDAD, COALESCE(V.NOMBRE, '--BLOQUEADO--') AS NOMBRE " & _
       "FROM RESERVAS R LEFT JOIN VECINOS V ON V.ID = R.ID_VECINO " & _
       "WHERE R.FECHA>=" & sqlDate(bookingDate) & s & _
-      "GROUP BY R.ID_RECURSO, R.INICIO, R.DURACION, V.UNIDAD, V.NOMBRE " & _
-      "ORDER BY R.ID_RECURSO, R.INICIO") then
-    dim resourceName: resourceName = ""
-    do while not rs.EOF
-      if resourceName <> rs("RECURSO") then
-        if len(resourceName) > 0 then
-          %></tbody></table><br></center><%
-          resourceName = rs("RECURSO")
-        end if
-        %>
+      "GROUP BY R.FECHA,R.ID_RECURSO, R.INICIO, R.DURACION, V.UNIDAD, V.NOMBRE " & _
+      "ORDER BY R.ID_RECURSO,R.FECHA, R.INICIO") then
+      %>
         <center>
         <table class="reportLevel1" cellpadding="3" cellspacing="0" style="width: 40%">
         <thead>
-        <tr><th colspan="3"><b><%= rs("RECURSO") %> - <%= renderReportFullDateColumn(systemDateFromNewValue(getFieldIndex("FECHA"))) %></b></tr>
+        <tr><th colspan="3"><b><%= rs("RECURSO") %> - <%= renderReportFullDateColumn(systemDateFromNewValue(rs("FECHA"))) %></b></tr>
         <tr>
+          <th><b>Fecha</b></th>
           <th><b>Turno</b></th>
           <th><b>Lote</b></th>
           <th><b>Familia</b></th>
         </tr>
         </thead>
         <tbody>
-        <%
+      <%  
+    dim resourceName: resourceName = ""
+    do while not rs.EOF
+      if resourceName <> rs("RECURSO") then
+          resourceName = rs("RECURSO")
+          %><tr colspan="4" align="center"><%=resourceName%></tr><%
       end if
       %>
       <tr>
+        <td valign="top" align="center"><%= rs("FECHA") %></td>
         <td valign="top" align="center"><%= rs("TURNO") %></td>
         <td valign="top" align="center"><%= rs("UNIDAD") %></td>
         <td valign="top" align="center"><%= rs("NOMBRE") %></td>
