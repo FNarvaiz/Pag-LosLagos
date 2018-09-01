@@ -1,7 +1,7 @@
 <%
 
 dim formsServerPath
-formsServerPath = "http://" & Request.ServerVariables("SERVER_NAME") & left(request.serverVariables("URL"), inStrRev(request.serverVariables("URL"), "/"))
+formsServerPath = "https://" & Request.ServerVariables("SERVER_NAME") & left(request.serverVariables("URL"), inStrRev(request.serverVariables("URL"), "/"))
 dim formsServer: formsServer = formsServerPath & "forms.asp"
 dim formsAppPath: formsAppPath = formsServerPath & "app/"
 dim formsAppResourcePath: formsAppResourcePath = formsAppPath & "resource/"
