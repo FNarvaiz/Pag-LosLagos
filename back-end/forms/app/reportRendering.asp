@@ -63,7 +63,7 @@ function renderBookingListing
       "dbo.NOMBRE_TURNO(R.INICIO, R.DURACION) AS TURNO, " & _
       "V.UNIDAD, COALESCE(V.NOMBRE, '--BLOQUEADO--') AS NOMBRE " & _
       "FROM RESERVAS R LEFT JOIN VECINOS V ON V.ID = R.ID_VECINO " & _
-      "WHERE R.FECHA>=" & sqlDate(bookingDate) & "   " & _
+      "WHERE R.FECHA>=" & sqlDate(bookingDate) & " "&s&"  " & _
       "GROUP BY R.FECHA,R.ID_RECURSO, R.INICIO, R.DURACION, V.UNIDAD, V.NOMBRE " & _
       "ORDER BY R.ID_RECURSO,R.FECHA, R.INICIO") then
       %>
