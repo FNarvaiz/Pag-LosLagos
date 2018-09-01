@@ -83,7 +83,7 @@ function renderBookingListing
     do while not rs.EOF
       if resourceName <> rs("RECURSO") then
           resourceName = rs("RECURSO")
-          %><tr ><td colspan="4" align="center"><%=resourceName %></td></tr><%
+          %><tr ><td colspan="4" border-botton="1px solid" align="center"><%=resourceName %></td></tr><%
       end if
       %>
       <tr>
