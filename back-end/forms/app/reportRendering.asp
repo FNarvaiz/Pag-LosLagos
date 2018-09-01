@@ -63,14 +63,14 @@ function renderBookingListing
       "dbo.NOMBRE_TURNO(R.INICIO, R.DURACION) AS TURNO, " & _
       "V.UNIDAD, COALESCE(V.NOMBRE, '--BLOQUEADO--') AS NOMBRE " & _
       "FROM RESERVAS R LEFT JOIN VECINOS V ON V.ID = R.ID_VECINO " & _
-      "WHERE R.FECHA>=" & sqlDate(bookingDate) & s & _
+      "WHERE R.FECHA>=" & sqlDate(bookingDate) & "   " & _
       "GROUP BY R.FECHA,R.ID_RECURSO, R.INICIO, R.DURACION, V.UNIDAD, V.NOMBRE " & _
       "ORDER BY R.ID_RECURSO,R.FECHA, R.INICIO") then
       %>
         <center>
         <table class="reportLevel1" cellpadding="3" cellspacing="0" style="width: 40%">
         <thead>
-        <tr><th colspan="3"><b><%= rs("RECURSO") %> - <%= renderReportFullDateColumn(systemDateFromNewValue(rs("FECHA"))) %></b></tr>
+        <tr><th colspan="3"><b><%= rs("RECURSO") %></b></tr>
         <tr>
           <th><b>Fecha</b></th>
           <th><b>Turno</b></th>
@@ -84,7 +84,7 @@ function renderBookingListing
     do while not rs.EOF
       if resourceName <> rs("RECURSO") then
           resourceName = rs("RECURSO")
-          %><tr colspan="4" align="center"><%=resourceName%></tr><%
+          %><tr colspan="4" align="center"><%=resourceName %></tr><%
       end if
       %>
       <tr>
