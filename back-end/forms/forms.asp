@@ -189,7 +189,6 @@ select case verb
   case "error": logError
   case else:
     if not handleCustomVerbs then
-      response.write(getLoggedUsrData)
       if getLoggedUsrData then
         inserting = (verb = "newRecordView")
         eval(formId)
