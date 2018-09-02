@@ -55,7 +55,7 @@ end function
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
-<title>Vecinos de los Sauces - Sistema Brick</title>
+<title>Vecinos de los Lagos</title>
 <meta http-equiv="Content-Type" content="text/html;">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="Content-Script-Type" content="text/javascript">
