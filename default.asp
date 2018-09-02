@@ -63,6 +63,9 @@ end function
 <link rel="icon" type="image/png" href="contenidos/iconos/favicon-32x32.png" sizes="32x32" />
 <link rel="icon" type="image/png" href="contenidos/iconos/favicon-16x16.png" sizes="16x16" />
 <link rel="shortcut icon" href="contenidos/iconos/favicon.ico">
+<link href="https://www.vecinosdelgolf.com.ar/apple-touch-icon.png" rel="apple-touch-icon" />
+<link href="https://www.vecinosdelgolf.com.ar/icon-hires.png" rel="icon" sizes="192x192" />
+<link href="https://www.vecinosdelgolf.com.ar/icon-normal.png" rel="icon" sizes="128x128" />
 <%
 includeStyleSheet("front-end/forms/forms.css")
 includeStyleSheet("front-end/forms/formsDialogs.css")
