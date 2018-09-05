@@ -184,6 +184,10 @@ li {
         padding: 4px;
         float: left;
 }
+.bookingsTypeButton{
+        padding: 1px 1px;
+        font-size: 12px;
+}
 .date h4 {
     font-size: 18;
     margin: 0px;
