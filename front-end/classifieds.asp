@@ -4,46 +4,7 @@ function renderClassifieds(categoryId)
   if not getUsrData then exit function
   if not servicesAllowed then exit function
   %>
-  <div id="dynPanelBg"></div>
-  <div id="classifiedsTitle">
-    AVISOS CLASIFICADOS
-    <p>En esta sección podrás revisar los avisos publicados por los vecinos del barrio.</p>
-    <p>Para publicar, dar de baja o realizar cualquier cambio envianos un e-mail a
-      <a href="mailto:Vecinos de los Lagos <sistema@vecinosloslagos.com.ar>">sistema@vecinosloslagos.com.ar</a></p>
-  </div>
-  <div id="classifiedsCategories">
-    RUBRO: 
-    <select id="classifiedsCategorySelector" onchange="classifiedsCategorySelected(this)">
-      <%
-      if isNull(categoryId) then
-        %>
-        <option selected="selected" value="">TODOS</option>
-        <%
-      else
-        %>
-        <option value="">TODOS</option>
-        <%
-      end if
-      dbGetData("SELECT C.ID, C.NOMBRE " & _
-        "FROM CATEGORIAS_AVISOS C WHERE EXISTS (SELECT * FROM AVISOS P WHERE P.ID_CATEGORIA=C.ID AND VIGENTE=1) ORDER BY NOMBRE")
-      do while not rs.EOF
-        if rs("ID") = categoryId then
-          %>
-          <option selected="selected" value="<%= rs("ID") %>"><%= uCase(rs("NOMBRE")) %></option>
-          <%
-        else
-          %>
-          <option value="<%= rs("ID") %>"><%= uCase(rs("NOMBRE")) %></option>
-          <%
-        end if
-        rs.moveNext
-      loop
-      dbReleaseData
-      %>
-    </select>
-  </div>
-  <div id="classifiedsPanel">
-  </div>
+  <img src="contenidos/costos.jpg" id="costos">
   <%
 end function
 

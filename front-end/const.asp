@@ -3,7 +3,7 @@
 dim lang: lang = getStringParam("lang", 2): if isNull(lang) then lang = "SP"
 
 dim mainMenuLabelsSP
-mainMenuLabelsSP = array("Inicio", "Quienes&nbsp;somos", "Hístorico", "Documentos", "Reservas", "Avisos", "Encuestas",  "Mi perfil", "Ayuda")
+mainMenuLabelsSP = array("Inicio", "Quienes&nbsp;somos", "Hístorico", "Documentos", "Reservas", "Costos", "Encuestas",  "Mi perfil", "Datos Utiles")
 dim mainMenuLabelsEN
 mainMenuLabelsEN = array("HOME", "ABOUT US", "TIME CHART", "LISTING", "CLASSIFIEDS", "RESERVATIONS", "SURVEYS", "CONTRACTORS", "MY PROFILE", "HELP")
 

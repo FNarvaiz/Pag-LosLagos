@@ -8,6 +8,11 @@
 .redirect{
     display: none;
 }
+#costos{
+        height: 455px;
+    width: 920px;
+    padding-left: 36px;
+}
 .buttonCancha{
         width: 100%;
         display: inline-block;
@@ -556,7 +561,11 @@ section.headerTable {
         display: none;
 
     }
-
+#costos{
+        height: auto;
+    width: 100%;
+    padding-left: initial;
+}
     #suppliersPanel{
         padding: 5px;
         height: auto;
