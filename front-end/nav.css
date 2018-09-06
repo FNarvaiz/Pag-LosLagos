@@ -56,14 +56,13 @@
     	background-color: #06061f;
 		
 	}
-	#mainMenuOption0,#mainMenuOption1,#mainMenuOption2,#mainMenuOption3,#mainMenuOption4,#mainMenuOption6,#mainMenuOption7 {
+	#mainMenuOption0,#mainMenuOption1,#mainMenuOption2,#mainMenuOption3,#mainMenuOption4,#mainMenuOption5,#mainMenuOption6,#mainMenuOption7 {
 		padding: 12 8 12 16;
 		display: block;
 		border-bottom:1px solid rgba(255,255,255,.5);
 		transition:all 0.4s ease-in-out 0s;
 	}
-	
-    #mainMenuOption5,#mainMenuOption8,#copyright{
+	#mainMenuOption8,#copyright{
         display: none;
     }
  
