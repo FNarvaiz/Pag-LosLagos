@@ -536,6 +536,7 @@ section.headerTable {
         height: 35px;
     }
     .fila2 *, .fila *{
+        height: auto;
         font-size: 20px;
     }
     .ajusteText{

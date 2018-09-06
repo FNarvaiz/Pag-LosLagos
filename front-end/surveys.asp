@@ -4,38 +4,7 @@ function renderSurveys
   if not getUsrData then exit function
   if not servicesAllowed then exit function
   %>
-  <div id="dynPanelBg"></div>
-  <div id="surveysTitle">
-    IDEAS Y PROPUESTAS PARA MEJORAR EL FUNCIONAMIENTO DEL BARRIO
-    <p>En esta sección proponemos encuestas para valorar diversas ideas y propuestas para la mejora y mantenimiento del barrio.</p>
-    <p>Estas ideas podrán presentarse en la próxima reunión para debatirlas.</p>
-    <p>Para participar indicá tu valoración en cada ítem. El resultado que aparece es el promedio alcanzado por cada propuesta.</p>
-  </div>
-  <div id="surveysPanel">
-    <div id="surveysLeftCol">
-    <%
-      dbGetData("SELECT ID, dbo.NOMBRE_CATEGORIA_ENCUESTA(ID_CATEGORIA) AS CATEGORIA, FECHA_ALTA, NOMBRE, " & _
-        "COALESCE(DESCRIPCION, '') AS DESCRIPCION, " & _
-        "dbo.VALORACION_ENCUESTA(ID) AS VALORACION, dbo.NOMBRE_VALORACION(dbo.VALORACION_ENCUESTA(ID)) AS NOMBRE_VALORACION, " & _ 
-        "dbo.CANTIDAD_VALORACIONES_ENCUESTA(ID) AS CANTIDAD_VALORACIONES, " & _
-        "dbo.NOMBRE_VALORACION(dbo.VALORACION_ENCUESTA_VECINO(ID, " & usrId & ")) AS VALORACION_VECINO, " & _
-        "dbo.COMENTARIO_ENCUESTA_VECINO(ID, " & usrId & ") AS COMENTARIO_VALORACION " & _
-        "FROM ENCUESTAS WHERE VIGENTE=1 " & _
-        "ORDER BY FECHA_ALTA DESC")
-      dim i: i = 1
-      do while not rs.EOF
-        %>
-        <div class="surveyItem" id="surveysItem<%= i %>"><% renderSurveyItem(i) %></div>
-        <%
-        i = i + 1
-        rs.moveNext
-      loop
-      dbReleaseData
-      %>
-    </div>
-    <div id="surveysRightCol">
-    </div>
-  </div>
+  <img src="contenidos/actividades.jpg" id="costos">
   <%
   logActivity "Encuestas", ""
 end function
