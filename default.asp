@@ -60,12 +60,23 @@ end function
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="Content-Script-Type" content="text/javascript">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<link rel="icon" type="image/png" href="contenidos/iconos/favicon-32x32.png" sizes="32x32" />
-<link rel="icon" type="image/png" href="contenidos/iconos/favicon-16x16.png" sizes="16x16" />
-<link rel="shortcut icon" href="contenidos/iconos/favicon.ico">
-<link href="https://www.vecinosdelgolf.com.ar/apple-touch-icon.png" rel="apple-touch-icon" />
-<link href="https://www.vecinosdelgolf.com.ar/icon-hires.png" rel="icon" sizes="192x192" />
-<link href="https://www.vecinosdelgolf.com.ar/icon-normal.png" rel="icon" sizes="128x128" />
+<link rel="apple-touch-icon" sizes="57x57" href="contenidos/iconos/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="contenidos/iconos/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="contenidos/iconos/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="contenidos/iconos/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="contenidos/iconos/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="contenidos/iconos/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="contenidos/iconos/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="contenidos/iconos/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="contenidos/iconos/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="contenidos/iconos/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="contenidos/iconos/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="contenidos/iconos/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="contenidos/iconos/favicon-16x16.png">
+<link rel="manifest" href="contenidos/iconos/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="contenidos/iconos/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
 <%
 includeStyleSheet("front-end/forms/forms.css")
 includeStyleSheet("front-end/forms/formsDialogs.css")
