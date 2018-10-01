@@ -285,7 +285,7 @@ function renderClubHouseBookingsStatus(resourceId)
     elseIf resourceId = bbqPlaceBookingResourceId then
       placeId=1
     end if
-    if dbGetData("SELECT F.FECHA, T.INICIO, T.DURACION, dbo.NOMBRE_TURNO(INICIO, DURACION) AS TURNO, T.ID,T.DIAS, " & _
+    if dbGetData("SELECT F.FECHA, T.INICIO, T.DURACION, dbo.NOMBRE_TURNO(INICIO, DURACION) AS TURNO, T.ID,T.DIAS,T.IDreal as IDTURNO, " & _
        " dbo.ID_VECINO_TURNO_RESERVA(" & resourceId & ", F.FECHA, T.INICIO) as vecinoID, " & _
         "dbo.ESTADO_TURNO_RESERVA(" & resourceId & ", F.FECHA, T.INICIO, T.DURACION)as ESTADO " & _
       "FROM dbo.LISTA_FECHAS_HOME() AS F " & _
@@ -349,14 +349,14 @@ function renderClubHouseBookingsStatus(resourceId)
               <div class="<%= rowClass %>">
               <div class="rowText left" title="<%= weekdayname(weekday(rs("FECHA"))) %>" ><%= day(d) %>/<%= month(d) %></div>
               <span class="bookingsTypeButton ajusteText <%= classCancha %>" title="Reservar <%= rs("TURNO") %>"
-                onclick="bookingsSendRequest2( '<%= day(d) %>/<%= month(d) %>/<%= year(d) %>',<%= placeId %>, <%= rs("ID") %>)"> <%= rs("TURNO")%></span>
+                onclick="bookingsSendRequest2( '<%= day(d) %>/<%= month(d) %>/<%= year(d) %>',<%= placeId %>, <%= rs("IDTURNO") %>)"> <%= rs("TURNO")%></span>
               <%
             end if
           elseif disponible then
             if ( InStr(rs("DIAS"),Weekday(rs("FECHA"),1))<>0) then
               %>
               <span class="bookingsTypeButton ajusteText <%= classCancha %>" title="Reservar <%= rs("TURNO") %>"
-                onclick="bookingsSendRequest2( '<%= day(d) %>/<%= month(d) %>/<%= year(d) %>',<%= placeId %>, <%= rs("ID") %>)"> <%= rs("TURNO")%></span>
+                onclick="bookingsSendRequest2( '<%= day(d) %>/<%= month(d) %>/<%= year(d) %>',<%= placeId %>, <%= rs("IDTURNO") %>)"> <%= rs("TURNO")%></span>
              
               <%
             end if

@@ -68,12 +68,13 @@ end function
 <link rel="apple-touch-icon" sizes="120x120" href="contenidos/iconos/apple-icon-120x120.png">
 <link rel="apple-touch-icon" sizes="144x144" href="contenidos/iconos/apple-icon-144x144.png">
 <link rel="apple-touch-icon" sizes="152x152" href="contenidos/iconos/apple-icon-152x152.png">
-<link rel="apple-touch-icon" sizes="180x180" href="contenidos/iconos/apple-icon-180x180.png">
+<link rel="apple-touch-icon"  sizes="180x180" href="contenidos/iconos/apple-icon-180x180.png">
 <link rel="icon" type="image/png" sizes="192x192"  href="contenidos/iconos/android-icon-192x192.png">
 <link rel="icon" type="image/png" sizes="32x32" href="contenidos/iconos/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="96x96" href="contenidos/iconos/favicon-96x96.png">
 <link rel="icon" type="image/png" sizes="16x16" href="contenidos/iconos/favicon-16x16.png">
 <link rel="manifest" href="contenidos/iconos/manifest.json">
+<link rel="contents" href="contenidos/iconos/ios/AppIcon.appiconset/Contents.json">
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="msapplication-TileImage" content="contenidos/iconos/ms-icon-144x144.png">
 <meta name="theme-color" content="#ffffff">
