@@ -49,12 +49,39 @@
     width: 100%;
     text-align: center;
 }
-#aboutResponsive{
-    width: 100%;
-    display: none;
-}
 #aboutResponsive section{
     width: 100%;
+}
+article.artAbout {
+    display: inline-block;
+    float: left;
+    width: 49%;
+    padding-left: 3;
+    height: 75px;
+    padding-top: 10px;
+}
+article.artAbout * {
+    padding: 0;
+    display: inline-block;
+    margin: 0;
+}
+article.artAbout img {
+    float: left;
+    margin-right: 10;
+}
+article.artAbout title {
+    margin-top: 7;
+    margin-bottom: 10;
+    float: left;
+}
+article.artAbout p {
+    width: 100%;
+    text-align: center;
+}
+#infoResponsive {
+    position: absolute;
+    left: 324px;
+    top: 365px;
 }
 #aboutContactPanel{
     background-color: rgba(0,0,0,0.8);
@@ -67,10 +94,6 @@
 #aboutContactPanel input, select, textarea {
         width: 100%;
         font-size: 15;
-    }
-#infoResponsive{
-        
-        display: none;
     }
 .turnOwnReservation{
     padding: 3px;
@@ -438,13 +461,20 @@ section.headerTable {
     }
     /*--------------------------------- ABOUT -------------------------------*/
     #aboutResponsive{
-        background-color: rgba(255,255,255,0.9);
+        background-color: rgba(0,0,0,0.9);
         padding: 10;
+        position: initial;
+        display: inline-block;
+        height: auto;
+        width: 100%;
+        
     }
-    .artAbout{
+    article.artAbout{
         padding: 5;
-    display: inline-block;
-    float: left;
+        display: inline-block;
+        float: left;
+        width: 47%;
+        height: 100px;
     }
     .artAbout img{
         float: left;
@@ -453,10 +483,13 @@ section.headerTable {
         display: inline-block;
         font-size: 20px;
         text-align: center;
+        width: 80%;
         padding-top: 7px;
         padding-left: 6;
     }
+    
     #infoResponsive{
+        position: initial;
         width: 100%;
         display:  inline-block;
         padding: 15;
@@ -696,6 +729,21 @@ section.headerTable {
     #timeLineDetailIconsBg {  width: 80%;  }
 }
 @media (max-width: 660px) {
+    article.artAbout {
+     float: initial; 
+    width: 100%;
+    height: auto;
+}
+    article.artAbout img {
+    float: initial;
+    margin-left: 45%;
+    margin-right: 45%;
+}
+article.artAbout title {
+     margin-top: 0;
+    width: 100%;
+     float: initial; 
+}
     #wrapper{width:100%;}
     #contactPanel{width:100%;float: initial;}
     .control-menu {

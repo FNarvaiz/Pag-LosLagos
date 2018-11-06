@@ -249,8 +249,8 @@ function renderAbout
   dim url: url = "contenidos/about/about.html"
   %>
   <div id="dynPanelBg"></div>
-  <iframe id="aboutContentPanel" scrolling="no" src="<%= url %>"></iframe>
-  <div id="aboutResponsive">
+  <!--<iframe id="aboutContentPanel" scrolling="no" src="<= url %>"></iframe>-->
+  <div class="aboutContentPanel" id="aboutResponsive">
     <section id="tabla">
       <article class="artAbout">
         <img src="contenidos/about/iconos/2.png"/>
@@ -267,13 +267,13 @@ function renderAbout
       <article class="artAbout">
         <img src="contenidos/about/iconos/1.png"/>
         <title>Comisión Seguridad</title>
-        <p>Marcelo Torassa, Gerardo Missan, Martin Guinart, Fernando Mauro, Alberto Monte</p>
+        <p>Marcelo Torassa, Martin Guinart, Fernando Mauro, Alberto Monte</p>
         <p>segloslagos@gmail.com</p>
       </article>
       <article class="artAbout">
         <img src="contenidos/about/iconos/5.png"/>
         <title>Comisión Comunicación</title>
-        <p>Florencia De Bella, Diego Sanchez Cavalieri, Martín Isola, Gabriela Arjona, Michelle Faour (Cultura)</p>
+        <p>Florencia De Bella, Diego Sanchez Cavalieri, Martín Isola, Gabriela Arjona, Michelle Faour</p>
         <p>comunicacionloslagos@gmail.com</p>
       </article>
       <article class="artAbout">
@@ -285,7 +285,7 @@ function renderAbout
       <article class="artAbout">
         <img src="contenidos/about/iconos/6.png"/>
         <title>Comisión Auditoria Y Presupuesto</title>
-    <p>Florencia De Bella, Sebastian Schvartzman, Leonardo Seoane, Lucas Kichic, Anamá Ferreira</p>
+    <p> Jose Mario De Bella, Sebastian Schvartzman, Leonardo Seoane, Lucas Kichic</p>
         <p>presupuestoloslagos@gmail.com</p>
       </article>
       <article class="artAbout">

@@ -1169,7 +1169,7 @@ div.classifiedImage img {
   width: 265px;
 }
 
-#aboutContentPanel {
+#aboutContentPanel, .aboutContentPanel {
   position: absolute;
   left: 0px;
   top: 0px;
