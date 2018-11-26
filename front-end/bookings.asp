@@ -568,7 +568,7 @@ function bookingsSendRequest(bookingDate, placeId, turnId)
         "<tr><td>Turno:</td><td>" & turnName & "</td></tr>" & _
         "</table>" & _
         "<p>La Administración se pondrá en contacto para confirmar la reserva.</p>"
-      sendMail "Reservas", "auxiliaresll@avn-nordelta.com,cmontero@avn-nordelta.com", "Solicitud de reserva a confirmar", message, "Familia " & usrName, usrEmail
+      sendMail "Reservas", "lmartinez@avn-nordelta.com", "Solicitud de reserva a confirmar", message, "Familia " & usrName, usrEmail
       logActivity "Solicitud reserva " & resourceName, "Enviada"
       exit function
     else
