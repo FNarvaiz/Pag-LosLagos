@@ -312,7 +312,7 @@ function renderAbout
   
     
   <div id="infoResponsive">
-  Intendente : Adrian Garcia . <br />Intendentes  Auxiliares : <br /> Seguridad: Carla Gonzales, <br /> Obras:Luciano Padin, Gustavo Piva. General: Horacio Najle.    
+  Director: Claudio Albandoz . <br />Director suplente: Marcelo Torassa<br /> Intendente: Miguel Tellarini
     
   </div>  
   
