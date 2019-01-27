@@ -40,7 +40,8 @@ function renderListadoMascotas
         <td valign="top" align="center"><%= rs("FAMILIA") %></td>
         <td valign="top" align="center"><%= rs("MASCOTA") %></td>
         <td valign="top" align="center"><%= rs("RAZA") %></td>
-        <td valign="top" align="center"><img src="<%= formsServer %>?sessionId=<%= sessionId %>&verb=binaryData&formId=<%= formId %>&recordId=<%=  rs("ID") %>&dbFieldBaseName=FOTO&t=<%= timer() %>" /></td>
+        <td valign="top" align="center"><img onclick="window.open(this.src)"
+          onload="imgResizeToFit(this, 160, 98); this.style.display = 'inline';" src="<%= formsServer %>?sessionId=<%= sessionId %>&verb=binaryData&formId=<%= formId %>&recordId=<%=  rs("ID") %>&dbFieldBaseName=FOTO&t=<%= timer() %>" /></td>
       </tr>
       <%
       rs.moveNext
