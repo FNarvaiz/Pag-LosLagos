@@ -41,7 +41,7 @@ function renderListadoMascotas
         <td valign="top" align="center"><%= rs("FAMILIA") %></td>
         <td valign="top" align="center"><%= rs("MASCOTA") %></td>
         <td valign="top" align="center"><%= rs("RAZA") %></td>
-         <td valign="top" align="center"><img src="data:image/jpeg;base64,<%= rs("FOTO_BINARYDATA") %>" /></td>
+        <td valign="top" align="center"><img src='data:image/jpeg;base64,<%= rs("FOTO_BINARYDATA") %>' /></td>
       </tr>
       <%
       rs.moveNext
