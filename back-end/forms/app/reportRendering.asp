@@ -12,7 +12,7 @@ function renderDefaultReport
 end function
 function renderListadoMascotas
   
-  if dbGetData("SELECT V.UNIDAD,V.NOMBRE AS FAMILIA,M.NOMBRE AS MASCOTA,M.RAZA,M.FOTO_BINARYDATA " & _
+  if dbGetData("SELECT V.UNIDAD,V.NOMBRE AS FAMILIA,M.NOMBRE AS MASCOTA,M.RAZA " & _
       "FROM VECINOS V INNER JOIN VECINOS_MASCOTAS M ON V.ID=M.ID_VECINO " & _
       "GROUP BY V.UNIDAD,V.NOMBRE,M.NOMBRE,M.RAZA " & _
       "ORDER BY V.NOMBRE") then
