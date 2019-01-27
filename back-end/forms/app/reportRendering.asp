@@ -16,7 +16,19 @@ function renderListadoMascotas
       "FROM VECINOS V INNER JOIN VECINOS_MASCOTAS M ON V.ID=M.ID_VECINO " & _
       "ORDER BY V.NOMBRE") then
     %>
-        
+    <script type="text/javascript">
+            function imgResizeToFit(imgElem, w, h) {
+      var r = imgElem.naturalWidth / imgElem.naturalHeight;
+      if (r < w / h) {
+        imgElem.style.height = h + "px";
+        imgElem.style.width = Math.round(h * r) + "px";
+      }
+      else {
+        imgElem.style.width = w + "px";
+        imgElem.style.height = Math.round(w / r) + "px";
+      }
+    }
+  </script>
         <center><table class="reportLevel1" cellpadding="3" cellspacing="0" style="width: 40%">
         <thead>
         <tr><th colspan="3"></tr>
