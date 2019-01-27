@@ -12,9 +12,9 @@ function renderDefaultReport
 end function
 function renderListadoMascotas
   
-  if dbGetData("SELECT V.UNIDAD,V.NOMBRE AS FAMILIA,M.NOMBRE AS MASCOTA,M.RAZA " & _
+  if dbGetData("SELECT V.UNIDAD,V.NOMBRE AS FAMILIA,M.NOMBRE AS MASCOTA,M.RAZA,M.FOTO_BINARYDATA " & _
       "FROM VECINOS V INNER JOIN VECINOS_MASCOTAS M ON V.ID=M.ID_VECINO " & _
-      "GROUP BY V.UNIDAD,V.NOMBRE,M.NOMBRE,M.RAZA " & _
+      "GROUP BY V.UNIDAD,V.NOMBRE,M.NOMBRE,M.RAZA,M.FOTO_BINARYDATA " & _
       "ORDER BY V.NOMBRE") then
     %>
         
@@ -27,6 +27,7 @@ function renderListadoMascotas
           <th><b>Familia</b></th>
           <th><b>Mascota</b></th>
           <th><b>Raza</b></th>
+          <th><b>IMG</b></th>
         </tr>
         </thead>
         <tbody>
@@ -40,7 +41,7 @@ function renderListadoMascotas
         <td valign="top" align="center"><%= rs("FAMILIA") %></td>
         <td valign="top" align="center"><%= rs("MASCOTA") %></td>
         <td valign="top" align="center"><%= rs("RAZA") %></td>
-       
+        <td valign="top" align="center"><img src='data:image/jpeg;base64,<%= rs("FOTO_BINARYDATA") %>' /></td>
       </tr>
       <%
       rs.moveNext
