@@ -29,9 +29,9 @@ function renderListadoMascotas
       }
     }
   </script>
-        <center><table class="reportLevel1" cellpadding="3" cellspacing="0" style="width: 40%">
+        <center><table class="reportLevel1" cellpadding="5" cellspacing="0" style="width: 40%">
         <thead>
-        <tr><th colspan="3"></tr>
+        <tr><th colspan="5"></tr>
         <tr>
 
           <th><b>Lote</b></th>
