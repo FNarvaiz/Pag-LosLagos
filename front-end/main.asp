@@ -102,54 +102,7 @@ function renderHome
     </table>
   </div>
   <div id="schedule" >
-    <section class="days">
-      <h2>Entrenamiento Funcional</h2>
-      <article class="activityFirst">
-        <h3 class="hour">Lunes, Miercoles y Viernes</h3>
-        <p >
-          8:30 a 9:30 hs
-        </p>
-      </article>
-      <article class="activitySecond">
-        <h3 class="hour">Martes y Jueves</h3>
-        <p >
-           20:00 a 21:00 hs
-        </p>
-      </article>
-    </section>
-    <section class="days">
-      <h2>Esc de Gim deportiva, Hockey y Fútbol</h2>
-      <article class="activityFirst">
-        <h3 class="hour">Martes y Jueves</h3>
-        <p >
-          17:30 a 19:00 hs
-        </p>
-      </article>
-       <article class="activitySecond">
-        <h3 class="hour">Sabado</h3>
-        <p >
-          9:30 a 13:00 hs
-        </p>
-      </article>
-    </section>
-    <section class="days">
-      <h2>Fútbol Femenino (Suspende por lluvia)</h2>
-      <article class="activityFirst">
-        <h3 class="hour">Viernes</h3>
-        <p >
-          9:30 a 11:00 hs
-        </p>
-      </article>
-    </section>
-    <section class="days">
-      <h2>Tenis infantil grupal</h2>
-      <article class="activityFirst">
-        <h3 class="hour">Sabado</h3>
-        <p >
-          10:00 a 11:00 hs
-        </p>
-      </article>
-    </section>
+    <img src="front-end/resource/logoGrande.jpg">
  </div>
   <%
   logActivity "Inicio", ""

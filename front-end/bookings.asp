@@ -378,7 +378,7 @@ end function
 function bookingCancel(bookingId)
   if not getUsrData then exit function
   dbGetData("SELECT ID_RECURSO, FECHA, dbo.NOMBRE_RECURSO_RESERVA(ID_RECURSO) AS RECURSO, dbo.HOUR_TO_STR(INICIO) AS TURNO, " & _
-    "CAST(CASE WHEN DATEDIFF(MINUTE, GETDATE(), dbo.FECHA_INICIO_TURNO(FECHA, INICIO)) >= 120 THEN 1 ELSE 0 END AS BIT) AS OK " & _
+    "CAST(CASE WHEN DATEDIFF(MINUTE, GETDATE(), dbo.FECHA_INICIO_TURNO(FECHA, INICIO)) >= 5 THEN 1 ELSE 0 END AS BIT) AS OK " & _
     "FROM RESERVAS WHERE ID=" & bookingId)
   dim OK: OK = rs("OK")
   dim resourceId: resourceId = rs("ID_RECURSO")
@@ -397,7 +397,7 @@ function bookingCancel(bookingId)
       logActivity "Cancela reserva " & resource, bookingDate & "&nbsp;" & turn
     else
       JSONAddOpFailed
-      JSONAddMessage resource & ": el turno " & bookingDate & " " & turn & "\n\nYa no es posible cancelar la reserva porque la anticipación mínima es de 2 horas."
+      JSONAddMessage resource & ": el turno " & bookingDate & " " & turn & "\n\nYa no es posible cancelar la reserva porque la anticipación mínima es de 5 minutos antes."
       logActivity "Cancela reserva " & resource, bookingDate & " " & turn & ", denegada: anticipación insuficiente."
     end if
   end if
