@@ -102,7 +102,7 @@ function renderHome
     </table>
   </div>
   <div id="schedule" >
-    <img src="front-end/resource/logoGrande.jpg">
+    <img src="../contenidos/iconos/android-icon-192x192.png">
  </div>
   <%
   logActivity "Inicio", ""
