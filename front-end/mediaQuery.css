@@ -229,13 +229,12 @@ li {
 }
 #schedule{
     padding: 10;
+    padding-top: 60px;
+    background-image: none;
+    background-color: #ffffa8;
     text-align: center;
 }
-#schedule p{
-    font-size: 13px;
-    color: white;
-    text-align: center;
-}
+#schedule 
 
 #timeLineRowLabels{
 width: 20%;
