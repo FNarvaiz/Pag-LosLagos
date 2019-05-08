@@ -64,19 +64,20 @@ article.artAbout * {
     padding: 0;
     display: inline-block;
     margin: 0;
-}
-article.artAbout img {
-    float: left;
-    margin-right: 10;
+    text-align: left;
+
 }
 article.artAbout title {
-    margin-top: 7;
-    margin-bottom: 10;
+    font-weight: bold;
+    font-size: 13px;
+  border-bottom: 1px solid;
+    margin-top: 5;
+    margin-bottom: 3;
     float: left;
 }
 article.artAbout p {
     width: 100%;
-    text-align: center;
+   
 }
 #infoResponsive {
     position: absolute;

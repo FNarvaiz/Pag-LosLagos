@@ -117,9 +117,10 @@
 #formSurveysCategoriesRecordView { top: 149px;	height: 100px }
 
 #formClassifiedsCategories { left: 0px; top: 335px; width: 245px;	height: 211px; overflow: hidden; border-right: solid 1px #404040 }
-#formClassifiedsCategoriesGridView { top: 20px; height: 96px }
-#formClassifiedsCategoriesRecordView { top: 116px;	height: 95px }
+#formClassifiedsCategoriesGridView,#formReservasRecursosGridView { top: 20px; height: 96px }
+#formClassifiedsCategoriesRecordView,#formReservasRecursosRecordView { top: 116px;	height: 95px }
 
+#formReservasRecursos{ left: 246px; top: 322px; width: 245px;	height: 211px; overflow: hidden; border-right: solid 1px #404040 }
 /* Security ------------------------------------ */
 
 #formSecurityNeighbors { left: 0px;	top: 28px; width: 300px; height: 300px; overflow: hidden }

@@ -5,8 +5,8 @@ function formAdminParams
   formContainerCssClass = "paramsFormContainer"
   formContainerTitleCssClass = "paramsFormContainerTitle"
   formTitle = "Parámetros del sistema"
-  forms = array("formCommissions", "formTimelineCategories", "formSuppliersCategories", "formSurveysCategories", "formClassifiedsCategories")
-  childFormIds = "formCommissions,formTimelineCategories,formSuppliersCategories,formSurveysCategories,formClassifiedsCategories"
+  forms = array("formCommissions", "formTimelineCategories", "formSuppliersCategories", "formSurveysCategories", "formClassifiedsCategories","formReservasRecursos")
+  childFormIds = "formCommissions,formTimelineCategories,formSuppliersCategories,formSurveysCategories,formClassifiedsCategories,formReservasRecursos"
 end function
 
 function formCommissions
@@ -132,6 +132,28 @@ function formClassifiedsCategories
   recordViewDBFields = array(true, true, true)
   recordViewReadOnlyFields = array(false, false, false)
   recordViewFieldLabels = array("Código", "Nombre", "Vigente")
+  recordViewFieldDefaults = array(null, null, true)
+  recordViewNullableFields = array(false, false, false)
+  recordViewFieldRenderFuncs = array("renderRecordViewNumericField", "renderRecordViewLiteralField", "renderRecordViewBooleanField")
+end function
+function formReservasRecursos
+  usrAccessLevel = 3
+  formTitle = "Recursos Reservas"
+  formTable = "RESERVAS_RECURSOS"
+  
+  formGridViewRowCount = 5
+  formGridColumns = array("ID", "NOMBRE")
+  formGridColumnTypes = array(formGridColumnGeneral, formGridColumnGeneral)
+  formGridColumnWidths = array(25, 140)
+  formGridViewShowFooter = false
+
+  recordViewFieldLeftPos = 80
+  recordViewEditboxWidth = 130
+    
+  recordViewFields = array("ID", "NOMBRE", "VIGENTE")
+  recordViewDBFields = array(true, true, true)
+  recordViewReadOnlyFields = array(true, false, false)
+  recordViewFieldLabels = array("Código", "Nombre", "Habilitada")
   recordViewFieldDefaults = array(null, null, true)
   recordViewNullableFields = array(false, false, false)
   recordViewFieldRenderFuncs = array("renderRecordViewNumericField", "renderRecordViewLiteralField", "renderRecordViewBooleanField")

@@ -1177,10 +1177,11 @@ div.classifiedImage img {
 	height: 100%;
   color: #ffffff;
   font-size: 13px;
-  font-weight: bold;
+  
   border-style: none;
   overflow: hidden;
 }
+
 #aboutContactPanel {
   position: absolute;
   left: 640px;

@@ -206,58 +206,49 @@ function renderAbout
   <div class="aboutContentPanel" id="aboutResponsive">
     <section id="tabla">
       <article class="artAbout">
-        <img src="contenidos/about/iconos/2.png"/>
         <title>Comisión Arquitectura</title>
-        <p>Paola Baglietto, Paula Salinas, Guadalupe Roberi</p>
-        <p>arquitecturaloslagos@gmail.com</p>
+        <p>Paola Baglietto (L.90), Guadalupe Roberi (L.174)</p>
+        <p><a href="mailto:arquitecturaloslagos@gmail.com" >arquitecturaloslagos@gmail.com</a></p>
       </article>
       <article class="artAbout">
-        <img src="contenidos/about/iconos/12.png"/>
         <title>Comisión Laguna</title>
-        <p>Matías Bonta, Héctor Filice</p>
-        <p>lagunaloslagos@gmail.com</p>
+        <p>Matías Bonta (L.168), Héctor Filice (L.158)</p>
+        <p><a href="mailto:lagunaloslagos@gmail.com" >lagunaloslagos@gmail.com</a></p>
       </article>
       <article class="artAbout">
-        <img src="contenidos/about/iconos/1.png"/>
         <title>Comisión Seguridad</title>
-        <p>Marcelo Torassa, Martin Guinart, Fernando Mauro, Alberto Monte</p>
-        <p>segloslagos@gmail.com</p>
+        <p>Marcelo Torassa (L.286), Martin Guinart (L.234), Fernando Mauro (L.314), Alberto Monte (L.86)</p>
+        <p><a href="mailto:segloslagos@gmail.com" >segloslagos@gmail.com</a></p>
       </article>
       <article class="artAbout">
-        <img src="contenidos/about/iconos/5.png"/>
         <title>Comisión Comunicación</title>
-        <p>Florencia De Bella, Diego Sanchez Cavalieri, Martín Isola, Gabriela Arjona, Michelle Faour</p>
-        <p>comunicacionloslagos@gmail.com</p>
+        <p>Florencia De Bella (L.323), Diego Sanchez Cavalieri (L.184), Martín Isola (L.13)</p>
+        <p><a href="mailto:comunicacionloslagos@gmail.com" >comunicacionloslagos@gmail.com></a></p>
       </article>
       <article class="artAbout">
-        <img src="contenidos/about/iconos/4.png"/>
         <title>Comisión Deportes Y Recreación</title>
-        <p>Carlos Coronel, Edgardo Bravi, Juan Carlos Morales, Mariano Farina, Pedro Lares</p>
-         <p>deportesloslagos@gmail.com</p>
+        <p>Carlos Coronel (L.177), Mariano Farina (L.240), Hernan Saenz (L.263), Sergio Gagliardi (L.179), Christian Espiga (L.90)</p>
+         <p><a href="mailto:deportesloslagos@gmail.com" >deportesloslagos@gmail.com</a></p>
       </article>
       <article class="artAbout">
-        <img src="contenidos/about/iconos/6.png"/>
         <title>Comisión Auditoria Y Presupuesto</title>
-    <p> Jose Mario De Bella, Sebastian Schvartzman, Leonardo Seoane, Lucas Kichic</p>
-        <p>presupuestoloslagos@gmail.com</p>
+    <p> Jose Mario De Bella (L.322), Sebastian Schvartzman (L.211), Lucas Kichic (L.126), Pedro Sebess (L.60), Javier Fernández Arancibia (L.59)</p>
+        <p><a href="mailto:presupuestoloslagos@gmail.com" >presupuestoloslagos@gmail.com</a></p>
       </article>
       <article class="artAbout">
-        <img src="contenidos/about/iconos/3.png"/>
-        <title>Comsion Espacios Verdes</title>
-        <p>Javier Speziale, Aníbal Montes</p>
-        <p>espaciosverdesloslagos@gmail.com</p>
+        <title>Comisión Espacios Verdes</title>
+        <p>Javier Speziale (L.200), Aníbal Montes (L.309)</p>
+        <p><a href="mailto:espaciosverdesloslagos@gmail.com" >espaciosverdesloslagos@gmail.com</a></p>
       </article>
       <article class="artAbout">
-        <img src="contenidos/about/iconos/7.png"/>
-        <title>Comsion Tribunal de Disciplina</title>
-        <p>Titulares: Marcelo Torassa, Martín Guinart, Diego Sánchez Cavalieri. Suplentes: Federico Georgiatis, Gabriela Sebess.</p>
-        <p>tribunaldedisciplinaloslagos@gmail.com</p>
+        <title>Comisión Tribunal de Disciplina</title>
+        <p>Titulares: Marcelo Torassa (L.286), Martín Guinart (L.234), Diego Sánchez Cavalieri (L.184). Suplentes: Federico Georgiatis, Gabriela Sebess.</p>
+        <p><a href="mailto:tribunaldedisciplinaloslagos@gmail.com" >tribunaldedisciplinaloslagos@gmail.com</a></p>
       </article>
       <article class="artAbout">
-        <img src="contenidos/about/iconos/4.png"/>
-        <title>Comsion Club House y Deportes</title>
-        <p>Claudia Rueda, Daniel Ini, Soraya Uribe, Ramiro López</p>
-        <p>clubhouseloslagos@gmail.com</p>
+        <title>Comisión Club House</title>
+        <p>Claudia Rueda (L.239), Ramiro López (L.301), Fernanda Sala (L.266), Sabrina Biscardi (L.143), Lorena Martinez (L.302)</p>
+        <p><a href="mailto:clubhouseloslagos@gmail.com" >clubhouseloslagos@gmail.com</a></p>
       </article>
       
         
@@ -265,7 +256,7 @@ function renderAbout
   
     
   <div id="infoResponsive">
-  Director: Claudio Albandoz . <br />Director suplente: Marcelo Torassa<br /> Intendente: Miguel Tellarini
+  Director: Claudio Albandoz (L.54) - <a href="mailto:loslagosdirector@gmail.com" >loslagosdirector@gmail.com</a> <br />Director suplente: Marcelo Torassa (L.286) - <a href="mailto:directorsuplenteLL@gmail.com" >directorsuplenteLL@gmail.com</a><br />Intendente: Miguel Tellarini - <a href="mailto:mtellarini@avn-nordelta.com" >mtellarini@avn-nordelta.com</a>
     
   </div>  
   
